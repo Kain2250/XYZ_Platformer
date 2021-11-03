@@ -12,8 +12,11 @@ namespace PlayerController
         private Rigidbody2D _rigidbody;
         private Vector2 _direction;
 
+        public static int money;
+
         private void Awake()
         {
+            money = 0;
             _rigidbody = GetComponent<Rigidbody2D>();
         }
 

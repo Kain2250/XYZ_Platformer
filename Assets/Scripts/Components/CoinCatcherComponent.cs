@@ -8,7 +8,8 @@ namespace PlayerController
 
         public void CoinCatch()
         {
-            Debug.Log("In the piggy bank +" + _nominal + " coins");
+            Hero.money += _nominal;
+            Debug.Log("In the piggy bank +" + _nominal + " coins. Total: " + Hero.money);
         }
     }
 }
