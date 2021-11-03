@@ -26,7 +26,6 @@ namespace PlayerController
         private void OnAxisMovement(InputAction.CallbackContext context)
         {
             var direction = context.ReadValue<Vector2>();
-
             _hero.SetDirection(direction);
         }
 

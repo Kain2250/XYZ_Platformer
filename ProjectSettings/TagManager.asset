@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Ground
+  - Prors
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Traps
     uniqueID: 65045545
+    locked: 0
+  - name: Props
+    uniqueID: 1142425969
     locked: 0
   - name: Character
     uniqueID: 3538544871
