@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 4.5
   _jumpForce: 12
+  _doubleJumpForbidden: 1
   _groundCheck: {fileID: 2387938860410560959}
 --- !u!50 &2387938860474839360
 Rigidbody2D:
