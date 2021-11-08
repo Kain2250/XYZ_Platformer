@@ -15,7 +15,7 @@ TagManager:
   - 
   - Ground
   - Prors
-  - 
+  - Interactables
   - 
   - 
   - 
@@ -58,4 +58,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 3538544871
+    locked: 0
+  - name: Interactables
+    uniqueID: 319046661
     locked: 0
