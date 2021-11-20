@@ -9,6 +9,8 @@ namespace OneEyedJoe
 
         [HideInInspector] public bool IsTouchingLayer;
 
+        public LayerMask CheckLayer { get => _checkLayer; }
+
         private void Awake()
         {
             _collider = GetComponent<Collider2D>();
