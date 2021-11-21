@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -48,11 +46,10 @@ namespace OneEyedJoe
         {
             foreach (var cheatItem in _cheats)
             {
-                if (_currentInput.Contains(cheatItem.Name))
-                {
-                    cheatItem.Action.Invoke();
-                    _currentInput = string.Empty;
-                }
+                if (!_currentInput.Contains(cheatItem.Name)) continue;
+
+                cheatItem.Action.Invoke();
+                _currentInput = string.Empty;
             }
         }
     }
