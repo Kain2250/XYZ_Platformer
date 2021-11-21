@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &321137036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321137037}
+  m_Layer: 0
+  m_Name: Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &321137037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321137036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.45, y: 0.254, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2387938860474839420}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375294298
 GameObject:
   m_ObjectHideFlags: 0
@@ -4915,6 +4945,7 @@ Transform:
   - {fileID: 1375294301}
   - {fileID: 2079752143836526270}
   - {fileID: 3170374303808356618}
+  - {fileID: 321137037}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5051,6 +5082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 4.5
   _jumpForce: 12
+  _landingVelosity: 12
   _damageJumpForce: 20
   _doubleJumpForbidden: 0
   _interactionRadius: 0.2
@@ -5058,6 +5090,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   _footStepParticles: {fileID: 1733796255}
+  _jumpingParticles: {fileID: 2597862678406670123}
+  _landingParticles: {fileID: 215322879463694905}
   _hitParticles: {fileID: 1375294300}
   _groundCheck: {fileID: 2387938860410560959}
 --- !u!114 &4716844179877098826

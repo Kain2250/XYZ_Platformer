@@ -13,8 +13,8 @@ namespace OneEyedJoe
 
         [Space] [Header("Interactions")]
         [SerializeField] private float _interactionRadius;
-        private Collider2D[] _interactionResult = new Collider2D[1];
         [SerializeField] private LayerMask _interactionLayer;
+        private Collider2D[] _interactionResult = new Collider2D[1];
 
         [Space] [Header("Particles")]
         [SerializeField] private SpawnComponent _footStepParticles;
@@ -23,9 +23,11 @@ namespace OneEyedJoe
         [SerializeField] private ParticleSystem _hitParticles;
 
         [SerializeField] private LayerCheck _groundCheck;
+        
+        public static int _money;
+        [HideInInspector] public Vector2 _direction;
 
         private Rigidbody2D _rigidbody;
-        private Vector2 _direction;
         private Animator _animator;
         private bool _allowDoubleJump;
 
@@ -34,13 +36,24 @@ namespace OneEyedJoe
         private static readonly int IsRunningKey = Animator.StringToHash("is-running");
         private static readonly int Hit = Animator.StringToHash("hit");
 
-        public static int _money;
-
         private void Awake()
         {
             _money = 0;
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+        }
+
+        public void FixedUpdate()
+        {
+            var xVelosity = _direction.x * _speed;
+            var yVelosity = CalculateYVelosity();
+            _rigidbody.velocity = new Vector2(xVelosity, yVelosity);
+
+            _animator.SetBool(IsGroundKey, IsGrounded());
+            _animator.SetFloat(VerticalVelosityKey, _rigidbody.velocity.y);
+            _animator.SetBool(IsRunningKey, _direction.x != 0);
+
+            UpdateSpriteDirection();
         }
 
         internal void Interact()
@@ -60,23 +73,7 @@ namespace OneEyedJoe
             }
         }
 
-        public void SetDirection(Vector2 direction)
-        {
-            _direction = direction;
-        }
-
-        public void FixedUpdate()
-        {
-            var xVelosity = _direction.x * _speed;
-            var yVelosity = CalculateYVelosity();
-            _rigidbody.velocity = new Vector2(xVelosity, yVelosity);
-
-            _animator.SetBool(IsGroundKey, IsGrounded());
-            _animator.SetFloat(VerticalVelosityKey, _rigidbody.velocity.y);
-            _animator.SetBool(IsRunningKey, _direction.x != 0);
-
-            UpdateSpriteDirection();
-        }
+        public void SetDirection(Vector2 direction) => _direction = direction;
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -181,9 +178,6 @@ namespace OneEyedJoe
             _hitParticles.Play();
         }
 
-        public void SpawnFootDust()
-        {
-            _footStepParticles.Spawn();
-        }
+        public void SpawnFootDust() => _footStepParticles.Spawn();
     }
 }
