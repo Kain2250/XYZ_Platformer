@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Door+key
   layers:
   - Default
   - TransparentFX
@@ -13,10 +14,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Traps
+  - Prors
+  - Interactables
   - 
   - 
   - 
@@ -41,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 4184336343
+    locked: 0
   - name: Ground
     uniqueID: 525623381
     locked: 0
@@ -50,6 +54,12 @@ TagManager:
   - name: Traps
     uniqueID: 65045545
     locked: 0
+  - name: Props
+    uniqueID: 1142425969
+    locked: 0
   - name: Character
     uniqueID: 3538544871
+    locked: 0
+  - name: Interactables
+    uniqueID: 319046661
     locked: 0
