@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door+key
+  - Enemy
+  - DontTouchIt
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Traps
   - Prors
   - Interactables
-  - 
+  - Trash
   - 
   - 
   - 

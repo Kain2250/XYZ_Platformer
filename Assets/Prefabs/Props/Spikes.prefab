@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2688664211336019294}
   m_Layer: 8
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -127,7 +127,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2688664211336019294}
-        m_MethodName: ApplyDamage
+        m_MethodName: Apply
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -149,4 +149,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733193012653e934fbc897f5ab00fb76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _changeHealthValue: 1
+  _changeHealthValue: -1

@@ -14,7 +14,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SaySomething",
+                    "name": "Attack",
                     "type": "Button",
                     "id": "d44db485-b0a8-42bf-bb5b-c82ad494f696",
                     "expectedControlType": "Button",
@@ -108,11 +108,11 @@
                 {
                     "name": "",
                     "id": "d3d7eed8-20f0-4ec0-a289-7fbaf1afdf60",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SaySomething",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

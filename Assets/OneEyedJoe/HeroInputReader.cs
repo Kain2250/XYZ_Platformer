@@ -15,7 +15,7 @@ namespace OneEyedJoe
             _inputActions.Hero.AxisMovement.performed += OnAxisMovement;
             _inputActions.Hero.AxisMovement.canceled += OnAxisMovement;
 
-            _inputActions.Hero.SaySomething.canceled += OnSaySomething;
+            _inputActions.Hero.Attack.canceled += OnAttack;
             _inputActions.Hero.Interact.canceled += OnInteract;
         }
 
@@ -30,11 +30,11 @@ namespace OneEyedJoe
             _hero.SetDirection(direction);
         }
 
-        public void OnSaySomething(InputAction.CallbackContext context)
+        public void OnAttack(InputAction.CallbackContext context)
         {
             if (context.canceled)
             {
-                _hero.SaySomething();
+                _hero.Attack();
             }
         }
 

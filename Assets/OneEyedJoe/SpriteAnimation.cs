@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace OneEyedJoe
 {
@@ -18,6 +19,7 @@ namespace OneEyedJoe
         private int _currentFrameIndex;
         private float _nextFrameTime;
         private int _currentClip;
+        [HideInInspector] public AnimationClips[] Clips => _clips;
 
         private void Start()
         {
@@ -44,7 +46,7 @@ namespace OneEyedJoe
         private void StartAnimation()
         {
             _nextFrameTime = Time.time + _secondsPerFrame;
-            _isPlaying = true;
+            enabled = _isPlaying = true;
             _currentFrameIndex = 0;
 
         }
@@ -62,10 +64,9 @@ namespace OneEyedJoe
                 }
                 else
                 {
+                    enabled = _isPlaying = clip.AllowNextClip;
                     clip.OnComplete?.Invoke();
                     _onComplete?.Invoke(clip.Name);
-                    _isPlaying = clip.AllowNextClip;
-                    enabled = _isPlaying;
                     if (clip.AllowNextClip)
                     {
                         _currentFrameIndex = 0;
@@ -80,11 +81,11 @@ namespace OneEyedJoe
             _currentFrameIndex++;
         }
 
-        public void SetClip(string name)
+        public void SetClip(string nameClip)
         {
-            for (int i = 0; i < _clips.Length; i++)
+            for (var i = 0; i < _clips.Length; i++)
             {
-                if (_clips[i].Name == name)
+                if (_clips[i].Name == nameClip)
                 {
                     _currentClip = i;
                     StartAnimation();
@@ -94,7 +95,21 @@ namespace OneEyedJoe
             _isPlaying = false;
             enabled = _isPlaying;
         }
+        
+        public void SetRandomClip()
+        {
+            var randomCount = Random.Range(0, _clips.Length);
+            SetClip(_clips[randomCount - 1].Name);
+        }
+        public void SetRandomClip(int countClip)
+        {
+            if (countClip > _clips.Length) return;
+            
+            var randomCount = Random.Range(0, countClip);
+            SetClip(_clips[randomCount].Name);
+        }
 
+        
     }
 
     [Serializable]

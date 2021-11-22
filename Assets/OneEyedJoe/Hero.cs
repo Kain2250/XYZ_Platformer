@@ -1,4 +1,6 @@
 ﻿using OneEyedJoe.Components;
+using OneEyedJoe.Utils;
+using UnityEditor.Animations;
 using UnityEngine;
 
 namespace OneEyedJoe
@@ -16,12 +18,21 @@ namespace OneEyedJoe
         [SerializeField] private LayerMask _interactionLayer;
         private readonly Collider2D[] _interactionResult = new Collider2D[1];
 
+        [Space] [Header("Attack")]
+        [SerializeField] private CheckCircleOverlap _attackRange;
+        [SerializeField] private int _damage;
+
         [Space] [Header("Particles")]
         [SerializeField] private SpawnComponent _footStepParticles;
         [SerializeField] private SpawnComponent _jumpingParticles;
         [SerializeField] private SpawnComponent _landingParticles;
+        [SerializeField] private SpawnComponent _swordEffectParticles;
         [SerializeField] private ParticleSystem _hitParticles;
 
+        [Space] [Header("Animators")]
+        [SerializeField] private AnimatorController _armed;
+        [SerializeField] private AnimatorController _unArmed;
+        
         [SerializeField] private LayerCheck _groundCheck;
         
         private int _money;
@@ -36,6 +47,9 @@ namespace OneEyedJoe
         private static readonly int VerticalVelocityKey = Animator.StringToHash("vertical-velosity");
         private static readonly int IsRunningKey = Animator.StringToHash("is-running");
         private static readonly int Hit = Animator.StringToHash("hit");
+        private static readonly int IsAttack = Animator.StringToHash("attack");
+
+        private bool _isArmed;
 
         private void Awake()
         {
@@ -146,14 +160,7 @@ namespace OneEyedJoe
         {
             return _groundCheck.IsTouchingLayer;
         }
-
-        public void SaySomething()
-        {
-            {
-                Debug.Log("Fire");
-            }
-        }
-
+        
         public void AddMoney(int count)
         {
             _money += count;
@@ -186,5 +193,33 @@ namespace OneEyedJoe
         }
 
         public void SpawnFootDust() => _footStepParticles.Spawn();
+
+        public void Attacking()
+        {
+            var gos = _attackRange.GetObjectsInRange();
+            foreach (var go in gos)
+            {
+
+                var hp = go.GetComponent<HealthComponent>();
+                if (hp != null && go.CompareTag("Enemy"))
+                {
+                    hp.Apply(-_damage);
+                }
+            }
+        }
+        
+        public void Attack()
+        {
+            if (!_isArmed) return;
+            
+            _animator.SetTrigger(IsAttack);
+            _swordEffectParticles.Spawn();
+        }
+        
+        public void ArmHero()
+        {
+            _isArmed = true;
+            _animator.runtimeAnimatorController = _armed;
+        }
     }
 }

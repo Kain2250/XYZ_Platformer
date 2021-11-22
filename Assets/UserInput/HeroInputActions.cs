@@ -27,7 +27,7 @@ public class @HeroInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""SaySomething"",
+                    ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""d44db485-b0a8-42bf-bb5b-c82ad494f696"",
                     ""expectedControlType"": ""Button"",
@@ -121,11 +121,11 @@ public class @HeroInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d3d7eed8-20f0-4ec0-a289-7fbaf1afdf60"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""SaySomething"",
+                    ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -258,7 +258,7 @@ public class @HeroInputActions : IInputActionCollection, IDisposable
         // Hero
         m_Hero = asset.FindActionMap("Hero", throwIfNotFound: true);
         m_Hero_HorizontalMovement = m_Hero.FindAction("HorizontalMovement", throwIfNotFound: true);
-        m_Hero_SaySomething = m_Hero.FindAction("SaySomething", throwIfNotFound: true);
+        m_Hero_Attack = m_Hero.FindAction("Attack", throwIfNotFound: true);
         m_Hero_AxisMovement = m_Hero.FindAction("AxisMovement", throwIfNotFound: true);
         m_Hero_Interact = m_Hero.FindAction("Interact", throwIfNotFound: true);
     }
@@ -311,7 +311,7 @@ public class @HeroInputActions : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Hero;
     private IHeroActions m_HeroActionsCallbackInterface;
     private readonly InputAction m_Hero_HorizontalMovement;
-    private readonly InputAction m_Hero_SaySomething;
+    private readonly InputAction m_Hero_Attack;
     private readonly InputAction m_Hero_AxisMovement;
     private readonly InputAction m_Hero_Interact;
     public struct HeroActions
@@ -319,7 +319,7 @@ public class @HeroInputActions : IInputActionCollection, IDisposable
         private @HeroInputActions m_Wrapper;
         public HeroActions(@HeroInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @HorizontalMovement => m_Wrapper.m_Hero_HorizontalMovement;
-        public InputAction @SaySomething => m_Wrapper.m_Hero_SaySomething;
+        public InputAction @Attack => m_Wrapper.m_Hero_Attack;
         public InputAction @AxisMovement => m_Wrapper.m_Hero_AxisMovement;
         public InputAction @Interact => m_Wrapper.m_Hero_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Hero; }
@@ -334,9 +334,9 @@ public class @HeroInputActions : IInputActionCollection, IDisposable
                 @HorizontalMovement.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnHorizontalMovement;
-                @SaySomething.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnSaySomething;
-                @SaySomething.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnSaySomething;
-                @SaySomething.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnSaySomething;
+                @Attack.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
+                @Attack.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
+                @Attack.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
                 @AxisMovement.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnAxisMovement;
                 @AxisMovement.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnAxisMovement;
                 @AxisMovement.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnAxisMovement;
@@ -350,9 +350,9 @@ public class @HeroInputActions : IInputActionCollection, IDisposable
                 @HorizontalMovement.started += instance.OnHorizontalMovement;
                 @HorizontalMovement.performed += instance.OnHorizontalMovement;
                 @HorizontalMovement.canceled += instance.OnHorizontalMovement;
-                @SaySomething.started += instance.OnSaySomething;
-                @SaySomething.performed += instance.OnSaySomething;
-                @SaySomething.canceled += instance.OnSaySomething;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
                 @AxisMovement.started += instance.OnAxisMovement;
                 @AxisMovement.performed += instance.OnAxisMovement;
                 @AxisMovement.canceled += instance.OnAxisMovement;
@@ -366,7 +366,7 @@ public class @HeroInputActions : IInputActionCollection, IDisposable
     public interface IHeroActions
     {
         void OnHorizontalMovement(InputAction.CallbackContext context);
-        void OnSaySomething(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
         void OnAxisMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
     }
