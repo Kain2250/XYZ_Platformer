@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,7 +13,8 @@ namespace OneEyedJoe.Components
         [SerializeField] private UnityEvent _onDamage;
         [SerializeField] private UnityEvent _onDie;
         [SerializeField] private UnityEvent _onHeal;
-        
+        [SerializeField] private HealthChangeEvent _onChange;
+
         public void Apply(int changeHealthValue)
         {
             _health += changeHealthValue;
@@ -34,5 +36,25 @@ namespace OneEyedJoe.Components
                     break;
             }
         }
+        
+#if UNITY_EDITOR
+        [ContextMenu("Update Health")]
+        private void UpdateHealth()
+        {
+            _onChange?.Invoke(_health);
+        }
+#endif
+
+        public void SetHealth(int health)
+        {
+            _health = health;
+        }
+        
+        [Serializable]
+        public class HealthChangeEvent : UnityEvent<int>
+        {
+            
+        }
+
     }
 }

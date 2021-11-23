@@ -5078,7 +5078,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 9d12ec015dd165a458ce121ae23a28a7, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &2387938860474839361
 CapsuleCollider2D:
@@ -5106,7 +5106,7 @@ Animator:
   m_GameObject: {fileID: 2387938860474839422}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8959dfce658407d4ab6c84d4e8ff22eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: d33a5e9e3c41fe34786d81789f11fcb0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5156,6 +5156,8 @@ MonoBehaviour:
   _landingParticles: {fileID: 215322879463694905}
   _swordEffectParticles: {fileID: 730209743}
   _hitParticles: {fileID: 1375294300}
+  _armed: {fileID: 9100000, guid: 8959dfce658407d4ab6c84d4e8ff22eb, type: 2}
+  _unArmed: {fileID: 9100000, guid: d33a5e9e3c41fe34786d81789f11fcb0, type: 2}
   _groundCheck: {fileID: 2387938860410560959}
   _direction: {x: 0, y: 0}
 --- !u!114 &4716844179877098826
@@ -5202,6 +5204,20 @@ MonoBehaviour:
   _onHeal:
     m_PersistentCalls:
       m_Calls: []
+  _onChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2387938860474839362}
+        m_MethodName: OnHealthChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4911754157683434163
 GameObject:
   m_ObjectHideFlags: 0

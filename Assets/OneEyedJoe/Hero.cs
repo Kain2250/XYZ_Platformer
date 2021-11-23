@@ -1,4 +1,6 @@
-﻿using OneEyedJoe.Components;
+﻿using System;
+using OneEyedJoe.Components;
+using OneEyedJoe.Model;
 using OneEyedJoe.Utils;
 using UnityEditor.Animations;
 using UnityEngine;
@@ -32,10 +34,9 @@ namespace OneEyedJoe
         [Space] [Header("Animators")]
         [SerializeField] private AnimatorController _armed;
         [SerializeField] private AnimatorController _unArmed;
-        
+
         [SerializeField] private LayerCheck _groundCheck;
-        
-        private int _money;
+
         [HideInInspector] public Vector2 _direction;
 
         private Rigidbody2D _rigidbody;
@@ -49,13 +50,20 @@ namespace OneEyedJoe
         private static readonly int Hit = Animator.StringToHash("hit");
         private static readonly int IsAttack = Animator.StringToHash("attack");
 
-        private bool _isArmed;
-
+        private GameSession _session;
         private void Awake()
         {
-            _money = 0;
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+        }
+
+        private void Start()
+        {
+            _session = FindObjectOfType<GameSession>();
+            var health = GetComponent<HealthComponent>();
+
+            health.SetHealth(_session.Data.Hp);
+            UpdateHeroWeapon();
         }
 
         public void FixedUpdate()
@@ -73,6 +81,8 @@ namespace OneEyedJoe
 
         internal void Interact()
         {
+            if (this == null) return;
+
             var size = Physics2D.OverlapCircleNonAlloc(
                 transform.position,
                 _interactionRadius,
@@ -160,11 +170,11 @@ namespace OneEyedJoe
         {
             return _groundCheck.IsTouchingLayer;
         }
-        
+
         public void AddMoney(int count)
         {
-            _money += count;
-            Debug.Log("In the piggy bank +" + count + " coins. Total: " + _money);
+            _session.Data.Coin += count;
+            Debug.Log($"In the piggy bank + {count} coins. Total: {_session.Data.Coin}");
         }
 
         public void TakeDamage()
@@ -173,7 +183,7 @@ namespace OneEyedJoe
             _animator.SetTrigger(Hit);
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageJumpForce);
 
-            if (_money > 0)
+            if (_session.Data.Coin > 0)
             {
                 SpawnCoins();
             }
@@ -181,8 +191,8 @@ namespace OneEyedJoe
 
         private void SpawnCoins()
         {
-            var numCoinsToDispose = Mathf.Min(_money, 5);
-            _money -= numCoinsToDispose;
+            var numCoinsToDispose = Mathf.Min(_session.Data.Coin, 5);
+            _session.Data.Coin -= numCoinsToDispose;
 
             var burst = _hitParticles.emission.GetBurst(0);
             burst.count = numCoinsToDispose;
@@ -207,19 +217,28 @@ namespace OneEyedJoe
                 }
             }
         }
-        
+
         public void Attack()
         {
-            if (!_isArmed) return;
-            
+            if (!_session.Data.IsArmed || this == null) return;
+
             _animator.SetTrigger(IsAttack);
             _swordEffectParticles.Spawn();
         }
         
         public void ArmHero()
         {
-            _isArmed = true;
-            _animator.runtimeAnimatorController = _armed;
+            _session.Data.IsArmed = true;
+            UpdateHeroWeapon();
+        }
+
+        private void UpdateHeroWeapon()
+        {
+            _animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _unArmed;
+        }
+        public void OnHealthChanged(int currentHealth)
+        {
+            _session.Data.Hp = currentHealth;
         }
     }
 }

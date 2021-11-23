@@ -7,11 +7,11 @@ namespace OneEyedJoe
     {
         [SerializeField] private Hero _hero;
 
-        private HeroInputActions _inputActions;
+        private HeroInputAction _inputActions;
 
         private void Awake()
         {
-            _inputActions = new HeroInputActions();
+            _inputActions = new HeroInputAction();
             _inputActions.Hero.AxisMovement.performed += OnAxisMovement;
             _inputActions.Hero.AxisMovement.canceled += OnAxisMovement;
 
