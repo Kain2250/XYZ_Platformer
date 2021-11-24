@@ -4769,7 +4769,7 @@ GameObject:
   m_Layer: 0
   m_Name: Teleport
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4781,7 +4781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4003950045607453592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.5, y: -7.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6137222189967375027}
@@ -4851,6 +4851,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destTransform: {fileID: 0}
+  _alphaTime: 1
+  _moveTime: 1
 --- !u!58 &4003950045607453572
 CircleCollider2D:
   m_ObjectHideFlags: 0
