@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 485033827}
   - component: {fileID: 485033826}
   m_Layer: 0
-  m_Name: CloudZone
+  m_Name: ExclamationSpawn
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222620857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.345, y: 0.346, z: 0}
+  m_LocalPosition: {x: -0.345, y: 0.346, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 1284820391}
   - component: {fileID: 1284820392}
   m_Layer: 0
-  m_Name: CloudZone (1)
+  m_Name: MissSpawn
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -308,6 +308,7 @@ Transform:
   - {fileID: 4500741516155466863}
   - {fileID: 485033827}
   - {fileID: 1284820391}
+  - {fileID: 8013143662957819147}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -352,7 +353,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 89cd06bcdabde2e428d0bde7c571e8db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -432,6 +433,7 @@ MonoBehaviour:
   _speed: 1
   _jumpForce: 12
   _damageJumpForce: 5
+  _invertScale: 1
   _groundCheck: {fileID: 2387938860410560959}
   _attackRange: {fileID: 1222620858}
   _particles: {fileID: 514533705}
@@ -476,6 +478,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2387938860474839422}
+        m_MethodName: set_layer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -500,7 +513,7 @@ MonoBehaviour:
   - Id: Jump
     Component: {fileID: 2597862678406670123}
   - Id: Miss
-    Component: {fileID: 485033826}
+    Component: {fileID: 1284820392}
   - Id: Exclamation
     Component: {fileID: 485033826}
 --- !u!114 &4216981662268170977
@@ -518,7 +531,7 @@ MonoBehaviour:
   _vizion: {fileID: 2358310374732020451}
   _checkAttack: {fileID: 126992075}
   _attackCooldown: 1
-  _alarmDelay: 2
+  _alarmDelay: 1
   _missDelay: 0.5
 --- !u!114 &3133832167508710208
 MonoBehaviour:
@@ -536,6 +549,51 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _treshold: 0.7
+--- !u!1 &3597273860249224812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8013143662957819147}
+  - component: {fileID: 7914116617665260434}
+  m_Layer: 0
+  m_Name: DeathSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8013143662957819147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597273860249224812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2387938860474839420}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7914116617665260434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597273860249224812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960cd168feb240f42b921e3cf52ec94b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 8013143662957819147}
+  _rpefab: {fileID: 5902330152961633555, guid: 77443a9efd4074388b0a8a32618e4811, type: 3}
 --- !u!1 &4911754157683434163
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +619,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4911754157683434163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
@@ -654,7 +712,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.0588241, y: 0.5214809}
+  m_Offset: {x: -1.058824, y: 0.5214809}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}

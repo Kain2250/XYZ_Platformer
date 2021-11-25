@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using OneEyedJoe.Components;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace OneEyedJoe.Creatures
         [SerializeField] private float _attackCooldown = 1f;
         [SerializeField] private float _alarmDelay = 0.5f;
         [SerializeField] private float _missDelay = 0.5f;
+        [SerializeField] private float _deathCloudDelay = 0.5f;
         
         private Coroutine _current;
         private GameObject _target;
@@ -31,6 +33,7 @@ namespace OneEyedJoe.Creatures
             _animator = GetComponent<Animator>();
             _patrol = GetComponent<Patrol>();
         }
+        
         private void Start()
         {
             StartState(_patrol.DoPatrol());
@@ -48,7 +51,9 @@ namespace OneEyedJoe.Creatures
         private IEnumerator AgrToHero()
         {
             _particles.Spawn("Exclamation");
+            
             yield return new WaitForSeconds(_alarmDelay);
+            
             StartState(GoToHero());
         }
         
@@ -64,12 +69,14 @@ namespace OneEyedJoe.Creatures
                 {
                     SetDirectionToTarget();
                 }
-                SetDirectionToTarget();
+                
                 yield return null;
             }
             
             _particles.Spawn("Miss");
             yield return new WaitForSeconds(_missDelay);
+            
+            StartState(_patrol.DoPatrol());
         }
         private IEnumerator Attack()
         {
@@ -79,7 +86,12 @@ namespace OneEyedJoe.Creatures
                 yield return new WaitForSeconds(_attackCooldown);
             }
             
-            StartState(GoToHero());
+            if (!_isDead)
+                StartState(GoToHero());
+            else
+            {
+                OnDie();
+            }
         }
 
         private void SetDirectionToTarget()
@@ -93,16 +105,21 @@ namespace OneEyedJoe.Creatures
         {
             _isDead = true;
             _animator.SetBool(IsDie, true);
-            
-            if (_current != null)
+
+            if (_current != null || _isDead)
+            {
+                _creature.SetDirection(Vector2.zero);
                 StopCoroutine(_current);
+            }
         }
-        
+
+        public void DeathCloudSpawn() => _particles.Spawn("DeathCloud");
+
         private void StartState(IEnumerator coroutine)
         {
             _creature.SetDirection(Vector2.zero);
             
-            if (_current != null)
+            if (_current != null || _isDead)
                 StopCoroutine(_current);
 
             _current = StartCoroutine(coroutine);

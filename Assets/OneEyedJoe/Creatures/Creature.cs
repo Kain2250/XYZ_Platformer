@@ -12,6 +12,7 @@ namespace OneEyedJoe.Creatures
         [SerializeField] protected float _speed;
         [SerializeField] protected float _jumpForce;
         [SerializeField] protected float _damageJumpForce;
+        [SerializeField] private bool _invertScale;
         
         [Header("Checkers")]
         [SerializeField] protected LayerCheck _groundCheck;
@@ -93,13 +94,14 @@ namespace OneEyedJoe.Creatures
 
         private void UpdateSpriteDirection()
         {
+            var multiplier = _invertScale ? -1 : 1;
             if (Direction.x > 0)
             {
-                transform.localScale = Vector3.one;
+                transform.localScale = new Vector3(multiplier, 1, 1);
             }
             else if (Direction.x < 0)
             {
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(-1 * multiplier, 1, 1);
             }
         }
         
