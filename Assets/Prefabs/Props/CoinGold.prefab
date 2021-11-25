@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4735717510759146270}
   - component: {fileID: 4735717510759146269}
   - component: {fileID: 1127406819254905591}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: CoinGold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nominal: 10
-  _hero: {fileID: 2387938860474839362, guid: 6ad36842e1e45764c979349d27866b24, type: 3}
 --- !u!114 &1127406819254905591
 MonoBehaviour:
   m_ObjectHideFlags: 0

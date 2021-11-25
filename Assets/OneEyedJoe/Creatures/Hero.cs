@@ -1,5 +1,4 @@
-﻿using System;
-using OneEyedJoe.Components;
+﻿using OneEyedJoe.Components;
 using OneEyedJoe.Model;
 using OneEyedJoe.Utils;
 using UnityEditor.Animations;
@@ -15,9 +14,7 @@ namespace OneEyedJoe.Creatures
         [SerializeField] private LayerCheck _wallCheck;
 
         [Space] [Header("Interactions")]
-        [SerializeField] private float _interactionRadius;
-        [SerializeField] private LayerMask _interactionLayer;
-        private readonly Collider2D[] _interactionResult = new Collider2D[1];
+        [SerializeField] private CheckCircleOverlap _interactionCheck;
         
         [Space] [Header("Animators")]
         [SerializeField] private AnimatorController _armed;
@@ -31,7 +28,7 @@ namespace OneEyedJoe.Creatures
         protected override void Awake()
         {
             base.Awake();
-            _defaultGravityScale = _rigidbody.gravityScale;
+            _defaultGravityScale = Rigidbody.gravityScale;
         }
 
         private void Start()
@@ -46,35 +43,21 @@ namespace OneEyedJoe.Creatures
         protected override void Update()
         {
             base.Update();
-            if (_wallCheck.IsTouchingLayer) //&& _direction.x == transform.localScale.x)
+            if (_wallCheck.IsTouchingLayer && Direction.x == transform.localScale.x)
             {
                 _isOnWall = true;
-                _rigidbody.gravityScale = 0;
+                Rigidbody.gravityScale = 0;
             }
             else
             {
                 _isOnWall = false;
-                _rigidbody.gravityScale = _defaultGravityScale;
+                Rigidbody.gravityScale = _defaultGravityScale;
             }
         }
-        
+
         internal void Interact()
         {
-            if (this == null) return;
-
-            var size = Physics2D.OverlapCircleNonAlloc(
-                transform.position,
-                _interactionRadius,
-                _interactionResult,
-                _interactionLayer);
-            for (var i = 0; i < size; i++)
-            {
-                var interact = _interactionResult[i].GetComponent<InteractebleComponent>();
-                if (interact != null)
-                {
-                    interact.Interact();
-                }
-            }
+            _interactionCheck.Check();
         }
         
         private void OnCollisionEnter2D(Collision2D collision)
@@ -90,9 +73,9 @@ namespace OneEyedJoe.Creatures
 
         protected override float CalculateYVelocity()
         {
-            var isJumpPressing = _direction.y > 0;
+            var isJumpPressing = Direction.y > 0;
 
-            if (_isGrounded && !_doubleJumpForbidden || _isOnWall)
+            if (IsGrounded && !_doubleJumpForbidden || _isOnWall)
             {
                 _allowDoubleJump = true;
             }
@@ -106,7 +89,7 @@ namespace OneEyedJoe.Creatures
 
         protected override float CalculateJumpVelocity(float yVelocity)
         {
-            if (_isGrounded || !_allowDoubleJump || _doubleJumpForbidden)
+            if (IsGrounded || !_allowDoubleJump || _doubleJumpForbidden)
                 return base.CalculateJumpVelocity(yVelocity);
 
             _particles.Spawn("Jump");
@@ -145,7 +128,7 @@ namespace OneEyedJoe.Creatures
         
         public override void Attack()
         {
-            if (!_session.Data.IsArmed || this == null) return;
+            if (!_session.Data.IsArmed) return;
             base.Attack();
         }
         
@@ -157,7 +140,7 @@ namespace OneEyedJoe.Creatures
 
         private void UpdateHeroWeapon()
         {
-            _animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _unArmed;
+            Animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _unArmed;
         }
         public void OnHealthChanged(int currentHealth)
         {

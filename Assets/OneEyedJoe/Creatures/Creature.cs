@@ -4,13 +4,14 @@ using UnityEngine;
 
 namespace OneEyedJoe.Creatures
 {
+    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(Rigidbody2D))]
     public class Creature : MonoBehaviour
     {
         [Header("Params")]
         [SerializeField] protected float _speed;
         [SerializeField] protected float _jumpForce;
         [SerializeField] protected float _damageJumpForce;
-        [SerializeField] protected int _damage;
         
         [Header("Checkers")]
         [SerializeField] protected LayerCheck _groundCheck;
@@ -23,43 +24,43 @@ namespace OneEyedJoe.Creatures
         private static readonly int Hit = Animator.StringToHash("hit");
         private static readonly int IsAttack = Animator.StringToHash("attack");
 
-        protected Rigidbody2D _rigidbody;
-        protected Animator _animator;
-        protected Vector2 _direction;
-        protected bool _isGrounded;
+        protected Rigidbody2D Rigidbody;
+        protected Animator Animator;
+        protected Vector2 Direction;
+        protected bool IsGrounded;
         private bool _isJumping;
 
 
         protected virtual void Awake()
         {
-            _rigidbody = GetComponent<Rigidbody2D>();
-            _animator = GetComponent<Animator>();
+            Rigidbody = GetComponent<Rigidbody2D>();
+            Animator = GetComponent<Animator>();
         }
 
         protected virtual void Update()
         {
-            _isGrounded = _groundCheck.IsTouchingLayer;
+            IsGrounded = _groundCheck.IsTouchingLayer;
         }
         
         public void FixedUpdate()
         {
-            var xVelocity = _direction.x * _speed;
+            var xVelocity = Direction.x * _speed;
             var yVelocity = CalculateYVelocity();
-            _rigidbody.velocity = new Vector2(xVelocity, yVelocity);
+            Rigidbody.velocity = new Vector2(xVelocity, yVelocity);
 
-            _animator.SetBool(IsGroundKey, _isGrounded);
-            _animator.SetFloat(VerticalVelocityKey, _rigidbody.velocity.y);
-            _animator.SetBool(IsRunningKey, _direction.x != 0);
+            Animator.SetBool(IsGroundKey, IsGrounded);
+            Animator.SetFloat(VerticalVelocityKey, Rigidbody.velocity.y);
+            Animator.SetBool(IsRunningKey, Direction.x != 0);
 
             UpdateSpriteDirection();
         }
 
         protected virtual float CalculateYVelocity()
         {
-            var yVelocity = _rigidbody.velocity.y;
-            var isJumpPressing = _direction.y > 0;
+            var yVelocity = Rigidbody.velocity.y;
+            var isJumpPressing = Direction.y > 0;
 
-            if (_isGrounded)
+            if (IsGrounded)
             {
                 _isJumping = false;
             }
@@ -67,10 +68,10 @@ namespace OneEyedJoe.Creatures
             {
                 _isJumping = true;
                 
-                var isFalling = _rigidbody.velocity.y <= 0.001f;
+                var isFalling = Rigidbody.velocity.y <= 0.001f;
                 yVelocity = isFalling ? CalculateJumpVelocity(yVelocity) : yVelocity;
             }
-            else if (_rigidbody.velocity.y > 0.01 && _isJumping)
+            else if (Rigidbody.velocity.y > 0.01 && _isJumping)
             {
                 yVelocity *= 0.5f;
             }
@@ -79,7 +80,7 @@ namespace OneEyedJoe.Creatures
 
         protected virtual float CalculateJumpVelocity(float yVelocity)
         {
-            if (_isGrounded)
+            if (IsGrounded)
             {
                 yVelocity += _jumpForce;
                 _particles.Spawn("Jump");
@@ -88,15 +89,15 @@ namespace OneEyedJoe.Creatures
             return yVelocity;
         }
         
-        public void SetDirection(Vector2 direction) => _direction = direction;
+        public void SetDirection(Vector2 direction) => Direction = direction;
 
         private void UpdateSpriteDirection()
         {
-            if (_direction.x > 0)
+            if (Direction.x > 0)
             {
                 transform.localScale = Vector3.one;
             }
-            else if (_direction.x < 0)
+            else if (Direction.x < 0)
             {
                 transform.localScale = new Vector3(-1, 1, 1);
             }
@@ -105,27 +106,18 @@ namespace OneEyedJoe.Creatures
         public virtual void TakeDamage()
         {
             _isJumping = false;
-            _animator.SetTrigger(Hit);
-            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageJumpForce);
+            Animator.SetTrigger(Hit);
+            Rigidbody.velocity = new Vector2(Rigidbody.velocity.x, _damageJumpForce);
         }
 
         private void Attacking()
         {
-            var gos = _attackRange.GetObjectsInRange();
-            foreach (var go in gos)
-            {
-
-                var hp = go.GetComponent<HealthComponent>();
-                if (hp != null && go.CompareTag("Enemy"))
-                {
-                    hp.Apply(-_damage);
-                }
-            }
+            _attackRange.Check();
         }
 
         public virtual void Attack()
         {
-            _animator.SetTrigger(IsAttack);
+            Animator.SetTrigger(IsAttack);
             _particles.Spawn("SwordEffect");
         }
 
