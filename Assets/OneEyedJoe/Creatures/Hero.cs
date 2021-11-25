@@ -92,6 +92,7 @@ namespace OneEyedJoe.Creatures
             if (IsGrounded || !_allowDoubleJump || _doubleJumpForbidden)
                 return base.CalculateJumpVelocity(yVelocity);
 
+            Sounds.Play("Jump");
             _particles.Spawn("Jump");
             _allowDoubleJump = false;
             
@@ -129,6 +130,9 @@ namespace OneEyedJoe.Creatures
         public override void Attack()
         {
             if (!_session.Data.IsArmed) return;
+            
+            Sounds.Play("Melee");
+            _particles.Spawn("SwordEffect");
             base.Attack();
         }
         

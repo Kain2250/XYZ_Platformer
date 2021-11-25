@@ -491,11 +491,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2387938860474839362, guid: 6ad36842e1e45764c979349d27866b24,
-        type: 3}
-      propertyPath: _invertScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2387938860474839420, guid: 6ad36842e1e45764c979349d27866b24,
         type: 3}
       propertyPath: m_RootOrder

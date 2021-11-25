@@ -1,5 +1,6 @@
 using System;
 using OneEyedJoe.Components;
+using OneEyedJoe.Components.Audio;
 using UnityEngine;
 
 namespace OneEyedJoe.Creatures
@@ -25,6 +26,7 @@ namespace OneEyedJoe.Creatures
         private static readonly int Hit = Animator.StringToHash("hit");
         private static readonly int IsAttack = Animator.StringToHash("attack");
 
+        protected PlaySoundsComponent Sounds;
         protected Rigidbody2D Rigidbody;
         protected Animator Animator;
         protected Vector2 Direction;
@@ -36,6 +38,7 @@ namespace OneEyedJoe.Creatures
         {
             Rigidbody = GetComponent<Rigidbody2D>();
             Animator = GetComponent<Animator>();
+            Sounds = GetComponent<PlaySoundsComponent>();
         }
 
         protected virtual void Update()
@@ -84,6 +87,7 @@ namespace OneEyedJoe.Creatures
             if (IsGrounded)
             {
                 yVelocity += _jumpForce;
+                Sounds.Play("Jump");
                 _particles.Spawn("Jump");
             }
 
@@ -120,7 +124,6 @@ namespace OneEyedJoe.Creatures
         public virtual void Attack()
         {
             Animator.SetTrigger(IsAttack);
-            _particles.Spawn("SwordEffect");
         }
 
 

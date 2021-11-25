@@ -106,7 +106,7 @@ namespace OneEyedJoe.Creatures
             _isDead = true;
             _animator.SetBool(IsDie, true);
 
-            if (_current != null || _isDead)
+            if (_current != null && _isDead)
             {
                 _creature.SetDirection(Vector2.zero);
                 StopCoroutine(_current);
@@ -119,7 +119,7 @@ namespace OneEyedJoe.Creatures
         {
             _creature.SetDirection(Vector2.zero);
             
-            if (_current != null || _isDead)
+            if (_current != null)
                 StopCoroutine(_current);
 
             _current = StartCoroutine(coroutine);

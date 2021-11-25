@@ -27,7 +27,7 @@ namespace OneEyedJoe
             for (var i = 0; i < size; i++)
             {
                 var overlapResult = _interactionResult[i];
-                var isInTag = _tags.Any(tag => overlapResult.CompareTag(tag));
+                var isInTag = _tags.Any(currentTag => overlapResult.CompareTag(currentTag));
                 if (isInTag)
                 {
                     _onOverlap?.Invoke(overlapResult.gameObject);
