@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - DontTouchIt
   - Ineractable
+  - SfxAudioSource
   layers:
   - Default
   - TransparentFX

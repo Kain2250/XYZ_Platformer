@@ -552,8 +552,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 683403564}
+  - component: {fileID: 1802257196}
   m_Layer: 5
-  m_Name: VolumeItem
+  m_Name: MusicOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,6 +582,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 80, y: 30.442528}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1802257196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683403563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ecbb5fdbef46c38ba71c24d37f288d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 105973015}
+  _textValue: {fileID: 1284883834}
 --- !u!1 &849309978
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,8 +831,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1889237848}
+  - component: {fileID: 1714060161}
   m_Layer: 5
-  m_Name: VolumeSFX
+  m_Name: SfxOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -845,6 +861,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 80, y: 30.442528}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1714060161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889237847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ecbb5fdbef46c38ba71c24d37f288d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 239649431}
+  _textValue: {fileID: 1990359943}
 --- !u!1 &1990359941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1360,7 @@ GameObject:
   - component: {fileID: 2100768655027144934}
   - component: {fileID: 5550766016430416822}
   - component: {fileID: 5065347305635444382}
+  - component: {fileID: 1641852693}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -1388,6 +1419,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92740466fca95940b1c51c6db0b5206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1641852693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2336932628836457005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac757df04ae54b489b50945de3f2180c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _music: {fileID: 1802257196}
+  _sfx: {fileID: 1714060161}
 --- !u!1 &5512535159720143694
 GameObject:
   m_ObjectHideFlags: 0

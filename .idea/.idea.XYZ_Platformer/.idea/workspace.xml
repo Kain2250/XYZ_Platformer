@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b56f142a-83c9-4c28-8dff-76e55f4a3ccd" name="Changes" comment="" />
+    <list default="true" id="b56f142a-83c9-4c28-8dff-76e55f4a3ccd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/MobAi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/MobAi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/FollowTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/FollowTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/AnimateWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/AnimateWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Settings/SettingsWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Settings/SettingsWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Settings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Settings.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Ship/New Folder.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Dialogue.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +33,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Audio/PlaySoundsComponent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21PllvSBuEDpzxM7k6JBAH3cyjv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -76,6 +88,7 @@
       <workItem from="1637876642410" duration="6000" />
       <workItem from="1637876700276" duration="448000" />
       <workItem from="1637877185380" duration="1899000" />
+      <workItem from="1637936033893" duration="5934000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <created>1637860980398</created>

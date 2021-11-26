@@ -7,13 +7,12 @@ namespace OneEyedJoe.Creatures
 {
     public class MobAi : MonoBehaviour
     {
-        [SerializeField] private LayerCheck _vizion;
+        [SerializeField] private LayerCheck _vision;
         [SerializeField] private LayerCheck _checkAttack;
 
         [SerializeField] private float _attackCooldown = 1f;
         [SerializeField] private float _alarmDelay = 0.5f;
         [SerializeField] private float _missDelay = 0.5f;
-        [SerializeField] private float _deathCloudDelay = 0.5f;
         
         private Coroutine _current;
         private GameObject _target;
@@ -59,7 +58,7 @@ namespace OneEyedJoe.Creatures
         
         private IEnumerator GoToHero()
         {
-            while (_vizion.IsTouchingLayer)
+            while (_vision.IsTouchingLayer)
             {
                 if (_checkAttack.IsTouchingLayer)
                 {
@@ -112,9 +111,7 @@ namespace OneEyedJoe.Creatures
                 StopCoroutine(_current);
             }
         }
-
-        public void DeathCloudSpawn() => _particles.Spawn("DeathCloud");
-
+        
         private void StartState(IEnumerator coroutine)
         {
             _creature.SetDirection(Vector2.zero);

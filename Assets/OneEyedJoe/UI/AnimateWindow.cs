@@ -9,7 +9,7 @@ namespace OneEyedJoe.UI
         private static readonly int Hide = Animator.StringToHash("Hide"); 
         private static readonly int Hidden = Animator.StringToHash("Hidden"); 
         
-        private void Start()
+        protected virtual void Start()
         {
             _animator = GetComponent<Animator>();
             
