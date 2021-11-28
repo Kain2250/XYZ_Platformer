@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace OneEyedJoe.Components
 {
@@ -17,24 +14,17 @@ namespace OneEyedJoe.Components
 
         public void Apply(int changeHealthValue)
         {
+            if (_health <= 0) return;
+            
             _health += changeHealthValue;
-            switch (changeHealthValue >= 0)
-            {
-                case true:
-                    _onHeal?.Invoke();
-                    break;
-                default:
-                    switch (_health <= 0)
-                    {
-                        case true:
-                            _onDie?.Invoke();
-                            break;
-                        default:
-                            _onDamage?.Invoke();
-                            break;
-                    }
-                    break;
-            }
+            _onChange?.Invoke(_health);
+            
+            if (changeHealthValue < 0)
+                _onDamage?.Invoke();
+            if (_health > 0)
+                _onHeal?.Invoke();
+            if (_health <= 0)
+                _onDie?.Invoke();
         }
         
 #if UNITY_EDITOR
@@ -50,6 +40,11 @@ namespace OneEyedJoe.Components
             _health = health;
         }
         
+        private void OnDestroy()
+        {
+            _onDie.RemoveAllListeners();
+        }
+
         [Serializable]
         public class HealthChangeEvent : UnityEvent<int>
         {

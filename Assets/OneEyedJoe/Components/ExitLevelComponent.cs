@@ -1,3 +1,4 @@
+using OneEyedJoe.Model;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,7 @@ namespace OneEyedJoe.Components
 
         public void Exit()
         {
+            FindObjectOfType<GameSession>().Save(); 
             SceneManager.LoadScene(_sceneName);
         }
         

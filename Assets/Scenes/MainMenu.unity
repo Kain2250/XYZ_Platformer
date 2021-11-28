@@ -200,6 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 97876271}
   - component: {fileID: 97876272}
+  - component: {fileID: 97876273}
   m_Layer: 15
   m_Name: MusicAudioSource
   m_TagString: Player
@@ -318,6 +319,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &97876273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97876270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef17c2f1630f448a80fdb11c2b66f966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 0
 --- !u!1001 &200345608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -497,6 +511,25 @@ MonoBehaviour:
   m_CropFrameX: 1
   m_CropFrameY: 1
   m_StretchFill: 1
+--- !u!1 &527246815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9209570869525990969, guid: eb941624907478a4a925cf8a8a56ba7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 9209570869852935000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &527246820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527246815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a703d6edec14d7396c60dbe7eed70cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: ff24a09a663eb4e8e8792b083d1219cf, type: 3}
 --- !u!4 &567320455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1407029787691134004, guid: c4c6679cd268c9d4abce421f2b151f39,
@@ -647,6 +680,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 655a91c7dc05407439ec0c922e23428e, type: 3}
+--- !u!1 &747578176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9209570869146498921, guid: eb941624907478a4a925cf8a8a56ba7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 9209570869852935000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &747578181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747578176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a703d6edec14d7396c60dbe7eed70cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: ff24a09a663eb4e8e8792b083d1219cf, type: 3}
 --- !u!1 &949844609
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286425339}
   - component: {fileID: 1286425340}
+  - component: {fileID: 1286425341}
   m_Layer: 0
   m_Name: SfxAudioSource
   m_TagString: SfxAudioSource
@@ -998,6 +1051,38 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1286425341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286425338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef17c2f1630f448a80fdb11c2b66f966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 1
+--- !u!1 &1431957576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9209570868166389475, guid: eb941624907478a4a925cf8a8a56ba7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 9209570869852935000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1431957581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431957576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a703d6edec14d7396c60dbe7eed70cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: ff24a09a663eb4e8e8792b083d1219cf, type: 3}
 --- !u!1 &1706858415
 GameObject:
   m_ObjectHideFlags: 0

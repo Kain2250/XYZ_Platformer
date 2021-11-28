@@ -5,16 +5,14 @@ namespace OneEyedJoe.Components
     public class ModifyHealthComponent : MonoBehaviour
     {
         [SerializeField] private int _changeHealthValue;
-
-        private HealthComponent _healthComponent;
         
         public void Apply(GameObject target)
         {
-            _healthComponent = target.GetComponent<HealthComponent>();
+            var healthComponent = target.GetComponent<HealthComponent>();
 
-            if (_healthComponent != null)
+            if (healthComponent != null)
             {
-                _healthComponent.Apply(_changeHealthValue);
+                healthComponent.Apply(_changeHealthValue);
             }
         }
     }

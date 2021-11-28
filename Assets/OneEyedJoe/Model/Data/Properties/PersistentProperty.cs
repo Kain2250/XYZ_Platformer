@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace OneEyedJoe.Model.Data.Properties
 {
-    public abstract class ObservableProperty<TPropertyType>
+    public abstract class PersistentProperty<TPropertyType>
     {
         [SerializeField] protected TPropertyType _value;
         protected TPropertyType _stored;
@@ -10,7 +10,7 @@ namespace OneEyedJoe.Model.Data.Properties
 
         public delegate void OnPropertyChanged(TPropertyType newValue, TPropertyType oldValue);
 
-        public ObservableProperty(TPropertyType defaultValue)
+        public PersistentProperty(TPropertyType defaultValue)
         {
             _defaultValue = defaultValue;
         }

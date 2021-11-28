@@ -14,6 +14,13 @@ namespace OneEyedJoe.Components
             var scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
         }
+
+        public void ReloadWithDie()
+        {
+            FindObjectOfType<GameSession>().LoadLastSave();
+            var scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+        }
     }
 }
 

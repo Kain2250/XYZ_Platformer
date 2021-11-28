@@ -1,7 +1,6 @@
 ﻿using OneEyedJoe.Components;
 using OneEyedJoe.Model;
 using OneEyedJoe.Utils;
-using UnityEditor.Animations;
 using UnityEngine;
 
 namespace OneEyedJoe.Creatures
@@ -17,8 +16,8 @@ namespace OneEyedJoe.Creatures
         [SerializeField] private CheckCircleOverlap _interactionCheck;
         
         [Space] [Header("Animators")]
-        [SerializeField] private AnimatorController _armed;
-        [SerializeField] private AnimatorController _unArmed;
+        [SerializeField] private RuntimeAnimatorController _armed;
+        [SerializeField] private RuntimeAnimatorController _unArmed;
         [SerializeField] private ParticleSystem _hitParticles;
         
         private GameSession _session;
@@ -29,6 +28,9 @@ namespace OneEyedJoe.Creatures
         {
             base.Awake();
             _defaultGravityScale = Rigidbody.gravityScale;
+            if (_session == null)
+              _session = FindObjectOfType<GameSession>();
+
         }
 
         private void Start()
@@ -36,7 +38,7 @@ namespace OneEyedJoe.Creatures
             _session = FindObjectOfType<GameSession>();
             var health = GetComponent<HealthComponent>();
 
-            health.SetHealth(_session.Data.Hp);
+            health.SetHealth(_session.Data.Hp.Value);
             UpdateHeroWeapon();
         }
 
@@ -101,14 +103,14 @@ namespace OneEyedJoe.Creatures
         
         public void AddMoney(int count)
         {
-            _session.Data.Coin += count;
-            Debug.Log($"In the piggy bank + {count} coins. Total: {_session.Data.Coin}");
+            _session.Data.Coin.Value += count;
+            Debug.Log($"In the piggy bank + {count} coins. Total: {_session.Data.Coin.Value}");
         }
 
         public override void TakeDamage()
         {
             base.TakeDamage();
-            if (_session.Data.Coin > 0)
+            if (_session.Data.Coin.Value > 0)
             {
                 SpawnCoins();
             }
@@ -116,8 +118,8 @@ namespace OneEyedJoe.Creatures
 
         private void SpawnCoins()
         {
-            var numCoinsToDispose = Mathf.Min(_session.Data.Coin, 5);
-            _session.Data.Coin -= numCoinsToDispose;
+            var numCoinsToDispose = Mathf.Min(_session.Data.Coin.Value, 5);
+            _session.Data.Coin.Value -= numCoinsToDispose;
 
             var burst = _hitParticles.emission.GetBurst(0);
             burst.count = numCoinsToDispose;
@@ -148,7 +150,7 @@ namespace OneEyedJoe.Creatures
         }
         public void OnHealthChanged(int currentHealth)
         {
-            _session.Data.Hp = currentHealth;
+            _session.Data.Hp.Value = currentHealth;
         }
     }
 }

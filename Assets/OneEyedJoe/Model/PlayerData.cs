@@ -1,12 +1,25 @@
 using System;
+using OneEyedJoe.Model.Data;
+using OneEyedJoe.Model.Data.Properties;
+using UnityEngine;
 
 namespace OneEyedJoe.Model
 {
     [Serializable]
     public class PlayerData
     {
-        public int Coin;
-        public int Hp;
+        [SerializeField] private InventoryData _inventory;
+
+        public IntProperty Hp = new IntProperty();
+        public IntProperty Coin = new IntProperty();
+        
         public bool IsArmed;
+        public InventoryData Inventory => _inventory;
+
+        public PlayerData Clone()
+        {
+            var json = JsonUtility.ToJson(this);
+            return JsonUtility.FromJson<PlayerData>(json);
+        }
     }
 }
