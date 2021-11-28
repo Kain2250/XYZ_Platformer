@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 8937483098478296754, guid: 7b16ed7d475b0ea4cb6ac718e3399482,
         type: 3}
       propertyPath: m_Name
-      value: Door+Key Variant
+      value: Door+Key
       objectReference: {fileID: 0}
     - target: {fileID: 8937483098478296754, guid: 7b16ed7d475b0ea4cb6ac718e3399482,
         type: 3}

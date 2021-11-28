@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace OneEyedJoe
+namespace OneEyedJoe.Utils
 {
     public static class GameObjectExtentions
     {

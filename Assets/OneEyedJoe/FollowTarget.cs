@@ -9,8 +9,11 @@ namespace OneEyedJoe
 
         private void LateUpdate()
         {
-            var direction = new Vector3(_target.position.x, _target.position.y, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, direction, Time.deltaTime * _damping);
+            var position = transform.position;
+            var position1 = _target.position;
+            var direction = new Vector3(position1.x, position1.y, position.z);
+            position = Vector3.Lerp(position, direction, Time.deltaTime * _damping);
+            transform.position = position;
         }
     }
 

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using OneEyedJoe.Creatures;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace OneEyedJoe
@@ -7,16 +9,28 @@ namespace OneEyedJoe
     {
         [SerializeField] private Hero _hero;
 
-        private HeroInputActions _inputActions;
+        private HeroInputAction _inputActions;
+        private bool _isPause;
 
         private void Awake()
         {
-            _inputActions = new HeroInputActions();
+            _inputActions = new HeroInputAction();
             _inputActions.Hero.AxisMovement.performed += OnAxisMovement;
             _inputActions.Hero.AxisMovement.canceled += OnAxisMovement;
 
-            _inputActions.Hero.SaySomething.canceled += OnSaySomething;
+            _inputActions.Hero.Attack.canceled += OnAttack;
             _inputActions.Hero.Interact.canceled += OnInteract;
+            _inputActions.Hero.Pause.canceled += OnPause;
+
+            _isPause = false;
+        }
+        private void OnPause(InputAction.CallbackContext context)
+        {
+            if (context.canceled)
+            {
+                _isPause = !_isPause;
+                Time.timeScale = _isPause ? 0 : 1f;
+            }
         }
 
         private void OnEnable()
@@ -30,11 +44,11 @@ namespace OneEyedJoe
             _hero.SetDirection(direction);
         }
 
-        public void OnSaySomething(InputAction.CallbackContext context)
+        public void OnAttack(InputAction.CallbackContext context)
         {
             if (context.canceled)
             {
-                _hero.SaySomething();
+                _hero.Attack();
             }
         }
 
@@ -44,6 +58,17 @@ namespace OneEyedJoe
             {
                 _hero.Interact();
             }
+        }
+
+        private void OnDestroy()
+        {
+            _inputActions.Hero.AxisMovement.performed -= OnAxisMovement;
+            _inputActions.Hero.AxisMovement.canceled -= OnAxisMovement;
+
+            _inputActions.Hero.Attack.canceled -= OnAttack;
+            _inputActions.Hero.Interact.canceled -= OnInteract;
+            _inputActions.Hero.Pause.canceled -= OnPause;
+
         }
     }
 }

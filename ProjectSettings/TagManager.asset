@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door+key
+  - Enemy
+  - DontTouchIt
+  - Ineractable
+  - SfxAudioSource
   layers:
   - Default
   - TransparentFX
@@ -18,10 +22,10 @@ TagManager:
   - Traps
   - Prors
   - Interactables
-  - 
-  - 
-  - 
-  - 
+  - Trash
+  - Walls
+  - Enemy
+  - Player
   - 
   - 
   - 
