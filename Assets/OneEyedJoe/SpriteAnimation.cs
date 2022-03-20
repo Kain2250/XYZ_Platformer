@@ -30,7 +30,7 @@ namespace OneEyedJoe
 
         private void OnEnable()
         {
-            _nextFrameTime = Time.time + _secondsPerFrame;
+            _nextFrameTime = Time.time;
         }
 
         private void OnBecameVisible()
@@ -45,7 +45,7 @@ namespace OneEyedJoe
 
         private void StartAnimation()
         {
-            _nextFrameTime = Time.time + _secondsPerFrame;
+            _nextFrameTime = Time.time;
             enabled = _isPlaying = true;
             _currentFrameIndex = 0;
 

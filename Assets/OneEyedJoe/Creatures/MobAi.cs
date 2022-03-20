@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Cinemachine.Utility;
 using OneEyedJoe.Components;
 using UnityEngine;
 
@@ -49,13 +50,21 @@ namespace OneEyedJoe.Creatures
         
         private IEnumerator AgrToHero()
         {
+            LookAtHero();
             _particles.Spawn("Exclamation");
             
             yield return new WaitForSeconds(_alarmDelay);
             
             StartState(GoToHero());
         }
-        
+
+        private void LookAtHero()
+        {
+            var direction = GetDirectionToTarget();
+            _creature.SetDirection(Vector2.zero);
+            _creature.UpdateSpriteDirection(direction);
+        }
+
         private IEnumerator GoToHero()
         {
             while (_vision.IsTouchingLayer)
@@ -72,6 +81,7 @@ namespace OneEyedJoe.Creatures
                 yield return null;
             }
             
+            _creature.SetDirection(Vector2.zero);
             _particles.Spawn("Miss");
             yield return new WaitForSeconds(_missDelay);
             
@@ -95,9 +105,16 @@ namespace OneEyedJoe.Creatures
 
         private void SetDirectionToTarget()
         {
+            var direction = GetDirectionToTarget();
+            _creature.SetDirection(direction.normalized);
+        }
+
+        private Vector2 GetDirectionToTarget()
+        {
             var direction = _target.transform.position - transform.position;
             direction.y = 0f;
-            _creature.SetDirection(direction.normalized);
+            return direction.normalized;
+
         }
         
         public void OnDie()

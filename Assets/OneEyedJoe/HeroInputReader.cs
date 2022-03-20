@@ -20,6 +20,7 @@ namespace OneEyedJoe
 
             _inputActions.Hero.Attack.canceled += OnAttack;
             _inputActions.Hero.Interact.canceled += OnInteract;
+            _inputActions.Hero.Throw.performed += OnThrow;
             _inputActions.Hero.Pause.canceled += OnPause;
 
             _isPause = false;
@@ -60,6 +61,14 @@ namespace OneEyedJoe
             }
         }
 
+        public void OnThrow(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                _hero.Throw();
+            }
+        }
+
         private void OnDestroy()
         {
             _inputActions.Hero.AxisMovement.performed -= OnAxisMovement;
@@ -68,6 +77,8 @@ namespace OneEyedJoe
             _inputActions.Hero.Attack.canceled -= OnAttack;
             _inputActions.Hero.Interact.canceled -= OnInteract;
             _inputActions.Hero.Pause.canceled -= OnPause;
+            _inputActions.Hero.Throw.performed -= OnThrow;
+
 
         }
     }

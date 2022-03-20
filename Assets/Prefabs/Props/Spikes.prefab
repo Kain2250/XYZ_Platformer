@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2688664211336019294}
   m_Layer: 9
   m_Name: Spikes
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

@@ -9,6 +9,7 @@ namespace OneEyedJoe.UI.Hud
     {
         [SerializeField] private ProgressBarWidget _healthBar;
         [SerializeField] private CoinWidget _coinBar;
+        [SerializeField] private WeaponWidget _weaponBar;
         
         private GameSession _session;
 
@@ -17,7 +18,11 @@ namespace OneEyedJoe.UI.Hud
             _session = FindObjectOfType<GameSession>();
             _session.Data.Hp.OnChanged += OnHealthChanged;
             _session.Data.Coin.OnChanged += OnCoinChanged;
+            _session.Data.Weapon.OnChanged += OnWeaponChanged;
+            
             OnCoinChanged(_session.Data.Coin.Value, 0);
+            
+            OnWeaponChanged(_session.Data.Weapon.Value, 0);
             
             OnHealthChanged(_session.Data.Hp.Value, 1);
         }
@@ -25,6 +30,12 @@ namespace OneEyedJoe.UI.Hud
         {
             _coinBar.SetCoinCount(newvalue);
         }
+        
+        private void OnWeaponChanged(int newvalue, int oldvalue)
+        {
+            _weaponBar.SetWeaponCount(newvalue);
+        }
+        
         private void OnHealthChanged(int newValue, int oldValue)
         {
             var maxHealth = DefsFacade.I.Player.MaxHealth;
@@ -35,7 +46,8 @@ namespace OneEyedJoe.UI.Hud
         private void OnDestroy()
         {
             _session.Data.Hp.OnChanged -= OnHealthChanged;
-            _session.Data.Coin.OnChanged -= OnHealthChanged;
+            _session.Data.Coin.OnChanged -= OnCoinChanged;
+            _session.Data.Weapon.OnChanged -= OnWeaponChanged;
         }
     }
 }

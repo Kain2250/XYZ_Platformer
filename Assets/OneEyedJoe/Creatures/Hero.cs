@@ -1,4 +1,5 @@
-﻿using OneEyedJoe.Components;
+﻿using System;
+using OneEyedJoe.Components;
 using OneEyedJoe.Model;
 using OneEyedJoe.Utils;
 using UnityEngine;
@@ -12,6 +13,8 @@ namespace OneEyedJoe.Creatures
         [SerializeField] private float _defaultGravityScale;
         [SerializeField] private LayerCheck _wallCheck;
 
+        [SerializeField] private Cooldown _throwCooldown;
+
         [Space] [Header("Interactions")]
         [SerializeField] private CheckCircleOverlap _interactionCheck;
         
@@ -19,6 +22,8 @@ namespace OneEyedJoe.Creatures
         [SerializeField] private RuntimeAnimatorController _armed;
         [SerializeField] private RuntimeAnimatorController _unArmed;
         [SerializeField] private ParticleSystem _hitParticles;
+
+        private static readonly int ThrowKey = Animator.StringToHash("throw");
         
         private GameSession _session;
         private bool _isOnWall;
@@ -45,7 +50,7 @@ namespace OneEyedJoe.Creatures
         protected override void Update()
         {
             base.Update();
-            if (_wallCheck.IsTouchingLayer && Direction.x == transform.localScale.x)
+            if (_wallCheck.IsTouchingLayer && Math.Abs(Direction.x - transform.localScale.x) < 0.01)
             {
                 _isOnWall = true;
                 Rigidbody.gravityScale = 0;
@@ -104,7 +109,7 @@ namespace OneEyedJoe.Creatures
         public void AddMoney(int count)
         {
             _session.Data.Coin.Value += count;
-            Debug.Log($"In the piggy bank + {count} coins. Total: {_session.Data.Coin.Value}");
+            //Debug.Log($"In the piggy bank + {count} coins. Total: {_session.Data.Coin.Value}");
         }
 
         public override void TakeDamage()
@@ -141,6 +146,8 @@ namespace OneEyedJoe.Creatures
         public void ArmHero()
         {
             _session.Data.IsArmed = true;
+            _session.Data.Weapon.Value += 1;
+
             UpdateHeroWeapon();
         }
 
@@ -148,9 +155,33 @@ namespace OneEyedJoe.Creatures
         {
             Animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _unArmed;
         }
+        
         public void OnHealthChanged(int currentHealth)
         {
             _session.Data.Hp.Value = currentHealth;
+        }
+
+        public void OnWeaponCountChanged(int currentWeaponCount)
+        {
+            _session.Data.Weapon.Value = currentWeaponCount;
+        }
+
+        public void Throw()
+        {
+            if (_throwCooldown.IsReady && _armed && _session.Data.Weapon.Value > 1)
+            {
+                Animator.SetTrigger(ThrowKey);
+                _throwCooldown.Reset();
+            }
+        }
+
+        public void OnDoThrow()
+        {
+            if (_session.Data.Weapon.Value > 1)
+            {
+                _particles.Spawn("Throw");
+                _session.Data.Weapon.Value -= 1;
+            }
         }
     }
 }

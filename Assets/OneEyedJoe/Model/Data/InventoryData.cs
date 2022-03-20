@@ -17,9 +17,17 @@ namespace OneEyedJoe.Model.Data
             set => _isArmed = value;
         }
 
+        public int Weapon
+        {
+            get => _weapon;
+            set => _weapon = value;
+        }
+
         private int _coin;
 
         private bool _isArmed;
+
+        private int _weapon;
 
     }
 }

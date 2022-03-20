@@ -3903,11 +3903,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4716844179877098826, guid: 6ad36842e1e45764c979349d27866b24,
-        type: 3}
-      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1607122498}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ad36842e1e45764c979349d27866b24, type: 3}
 --- !u!4 &514533692 stripped
@@ -4600,6 +4595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleport
       objectReference: {fileID: 0}
+    - target: {fileID: 4003950045607453592, guid: 7f3cf7df7bfd17943a215c08e7c4f99c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4003950045607453594, guid: 7f3cf7df7bfd17943a215c08e7c4f99c,
         type: 3}
       propertyPath: m_RootOrder
@@ -4928,7 +4928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687798452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.3841534, y: 0.16854167, z: -10}
+  m_LocalPosition: {x: -4.344434, y: 0.16854167, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25904,8 +25904,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     Hp:
-      _value: 0
+      _value: 10
     Coin:
+      _value: 0
+    Weapon:
       _value: 0
     IsArmed: 1
 --- !u!4 &1181761289
@@ -28894,6 +28896,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Player
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -29965,6 +29970,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sharky (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387938860474839422, guid: ad7528a0a018c7b41b466024c6d0d6eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3133832167508710208, guid: ad7528a0a018c7b41b466024c6d0d6eb,
         type: 3}
