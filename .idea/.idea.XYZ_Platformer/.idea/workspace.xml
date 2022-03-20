@@ -3,14 +3,59 @@
   <component name="ChangeListManager">
     <list default="true" id="b56f142a-83c9-4c28-8dff-76e55f4a3ccd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/MobAi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/MobAi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/FollowTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/FollowTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/AnimateWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/AnimateWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Settings/SettingsWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Settings/SettingsWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Settings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Settings.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Ship/New Folder.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Dialogue.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/CheatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Utils/CheatController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/CheatController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Utils/CheatController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/CheckCircleOverlap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ColliderBased/CheckCircleOverlap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/CheckCircleOverlap.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ColliderBased/CheckCircleOverlap.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ArmHeroComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/ArmHeroComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ArmHeroComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/ArmHeroComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/CoinComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/CoinComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/DestroyObjectComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/DestroyObjectComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/DestroyObjectComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/DestroyObjectComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/DoInteractableComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/DoInteractableComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/DoInteractableComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/DoInteractableComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/EnterCollisionComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ColliderBased/EnterCollisionComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/EnterCollisionComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ColliderBased/EnterCollisionComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/EnterTriger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ColliderBased/EnterTriger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/EnterTriger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ColliderBased/EnterTriger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ExitLevelComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/LevelManagement/ExitLevelComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ExitLevelComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/LevelManagement/ExitLevelComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Health/HealthComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/HealthComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Health/HealthComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/InteractebleComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/InteractebleComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/InteractebleComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/InteractebleComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/InvulnerabilityComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/InvulnerabilityComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ModifyHealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Health/ModifyHealthComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ModifyHealthComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Health/ModifyHealthComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ReloadLevelComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/LevelManagement/ReloadLevelComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ReloadLevelComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/LevelManagement/ReloadLevelComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/SpawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/SpawnComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/SpawnListComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnListComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/SpawnListComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnListComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/SwitchComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/SwitchComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/SwitchComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/SwitchComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/MobAi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/MobAi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/MobAi.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/MobAi.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Patrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/Patrol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Patrol.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/Patrol.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/PlatformPatrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/PlatformPatrol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/PlatformPatrol.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/PlatformPatrol.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/PointPatrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/PointPatrol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/PointPatrol.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/PointPatrol.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/HeroInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/HeroInputReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/HeroInputReader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/HeroInputReader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/LayerCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ColliderBased/LayerCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/LayerCheck.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ColliderBased/LayerCheck.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/SpriteAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Animations/SpriteAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/SpriteAnimation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Animations/SpriteAnimation.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/TakingAnItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/TakingAnItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/TakingAnItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/TakingAnItem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,16 +66,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/MobAi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Patrol.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/DestroyObjectComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/PointPatrol.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/ArmHeroComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/MobAi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/GoBased/RandomSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Health/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/DestroyObjectComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/DelayDestroyObjectComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/ArmHeroComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Audio/PlaySoundsComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/PointPatrol.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/Patrol.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="21PllvSBuEDpzxM7k6JBAH3cyjv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -49,6 +98,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="rider.run.widget.enabled.cache" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.build.unityPlugin" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -89,6 +139,8 @@
       <workItem from="1637876700276" duration="448000" />
       <workItem from="1637877185380" duration="1899000" />
       <workItem from="1637936033893" duration="5934000" />
+      <workItem from="1647790931110" duration="52000" />
+      <workItem from="1647791021930" duration="10830000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <created>1637860980398</created>
@@ -116,7 +168,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

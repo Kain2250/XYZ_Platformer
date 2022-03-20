@@ -1,6 +1,8 @@
 using System;
 using OneEyedJoe.Components;
 using OneEyedJoe.Components.Audio;
+using OneEyedJoe.Components.ColliderBased;
+using OneEyedJoe.Components.GoBased;
 using UnityEngine;
 
 namespace OneEyedJoe.Creatures

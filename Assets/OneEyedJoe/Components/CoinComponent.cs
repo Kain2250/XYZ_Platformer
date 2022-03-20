@@ -1,4 +1,5 @@
 ﻿using OneEyedJoe.Creatures;
+using OneEyedJoe.Creatures.Hero;
 using UnityEngine;
 
 namespace OneEyedJoe.Components
