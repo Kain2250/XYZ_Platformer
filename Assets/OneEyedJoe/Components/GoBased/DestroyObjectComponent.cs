@@ -9,7 +9,6 @@ namespace OneEyedJoe.Components.GoBased
         public void DestroyObject()
         {
             Destroy(_objectDestroy);
-
         }
     }
 }

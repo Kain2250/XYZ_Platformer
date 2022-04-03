@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 725744453}
   - component: {fileID: 725744454}
   - component: {fileID: 4131608681757926280}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &725744454
 MonoBehaviour:
@@ -74,7 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 730209742}
   - component: {fileID: 730209743}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: SwordAttackParticlePosition
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -93,7 +93,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &730209743
 MonoBehaviour:
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 730209742}
-  _rpefab: {fileID: 8498420654738728802, guid: eac0523a57d282d4687b0617c330f121, type: 3}
+  _prefab: {fileID: 8498420654738728802, guid: eac0523a57d282d4687b0617c330f121, type: 3}
 --- !u!1 &1222620857
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 1222620859}
   - component: {fileID: 1222620858}
   - component: {fileID: 6880333781911189398}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: AttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -139,7 +139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1222620858
 MonoBehaviour:
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 1375294301}
   - component: {fileID: 1375294300}
   - component: {fileID: 1375294299}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &1375294300
 ParticleSystem:
@@ -5008,7 +5008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495175772}
   - component: {fileID: 1495175773}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Listener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5027,7 +5027,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1495175773
 AudioListener:
@@ -5048,7 +5048,7 @@ GameObject:
   - component: {fileID: 2387938860410560952}
   - component: {fileID: 2387938860410560958}
   - component: {fileID: 2387938860410560959}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5067,7 +5067,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &2387938860410560958
 CircleCollider2D:
@@ -5137,17 +5137,17 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1495175772}
   - {fileID: 2387938860410560952}
+  - {fileID: 725744453}
+  - {fileID: 3137748726738648912}
   - {fileID: 3244424989789499120}
   - {fileID: 1375294301}
   - {fileID: 2079752143836526270}
   - {fileID: 3170374303808356618}
   - {fileID: 730209742}
-  - {fileID: 725744453}
-  - {fileID: 3137748726738648912}
-  - {fileID: 1222620859}
-  - {fileID: 1495175772}
   - {fileID: 6459630705971870010}
+  - {fileID: 1222620859}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5248,7 +5248,7 @@ Animator:
   m_GameObject: {fileID: 2387938860474839422}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d33a5e9e3c41fe34786d81789f11fcb0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8959dfce658407d4ab6c84d4e8ff22eb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5422,7 +5422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6459630705971870010}
   - component: {fileID: 7870118580431875676}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: SwordThrowSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -5437,11 +5437,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2930044156106696925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.243, y: 0.455, z: 0}
+  m_LocalPosition: {x: 0.22, y: 0.489, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7870118580431875676
 MonoBehaviour:
@@ -5456,7 +5456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 6459630705971870010}
-  _rpefab: {fileID: 8498420654738728802, guid: e584990dbc3584045a961a4c4b1eb394, type: 3}
+  _prefab: {fileID: 8498420654738728802, guid: e584990dbc3584045a961a4c4b1eb394, type: 3}
 --- !u!1 &4911754157683434163
 GameObject:
   m_ObjectHideFlags: 0
@@ -5467,7 +5467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3244424989789499120}
   - component: {fileID: 1733796255}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: FootStepSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -5486,7 +5486,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1733796255
 MonoBehaviour:
@@ -5501,7 +5501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 3244424989789499120}
-  _rpefab: {fileID: 8498420654738728802, guid: 5a5b3e986e9f0b04d80ac52a22127a81, type: 3}
+  _prefab: {fileID: 8498420654738728802, guid: 5a5b3e986e9f0b04d80ac52a22127a81, type: 3}
 --- !u!1 &7075936485591741975
 GameObject:
   m_ObjectHideFlags: 0
@@ -5513,7 +5513,7 @@ GameObject:
   - component: {fileID: 3137748726738648912}
   - component: {fileID: 8368408073054786168}
   - component: {fileID: 7504502708500158211}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: InteractionCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5532,7 +5532,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8368408073054786168
 MonoBehaviour:
@@ -5588,7 +5588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2079752143836526270}
   - component: {fileID: 2597862678406670123}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: JumpingSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -5607,7 +5607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2597862678406670123
 MonoBehaviour:
@@ -5622,7 +5622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 2079752143836526270}
-  _rpefab: {fileID: 8498420654738728802, guid: 690a2aafaa7d0174bba7006226eed4c0, type: 3}
+  _prefab: {fileID: 8498420654738728802, guid: 690a2aafaa7d0174bba7006226eed4c0, type: 3}
 --- !u!1 &8293032519642583993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5633,7 +5633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3170374303808356618}
   - component: {fileID: 215322879463694905}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: LandingSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -5652,7 +5652,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2387938860474839420}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &215322879463694905
 MonoBehaviour:
@@ -5667,4 +5667,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 3170374303808356618}
-  _rpefab: {fileID: 8498420654738728802, guid: 69436605b00730742bb466ef4cc5b731, type: 3}
+  _prefab: {fileID: 8498420654738728802, guid: 69436605b00730742bb466ef4cc5b731, type: 3}

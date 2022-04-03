@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 485033827}
-  _rpefab: {fileID: 5902330152961633555, guid: 6e8a18b859ec9ca4c8aab789a8adc7e4, type: 3}
+  _prefab: {fileID: 5902330152961633555, guid: 6e8a18b859ec9ca4c8aab789a8adc7e4, type: 3}
 --- !u!1 &1222620857
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 6880333781911189398}
   - component: {fileID: 479573564876128357}
   - component: {fileID: 126992075}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: AttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1284820391}
-  _rpefab: {fileID: 7788842001681350047, guid: f6748059869075c4cad37ecfecfa501d, type: 3}
+  _prefab: {fileID: 7788842001681350047, guid: f6748059869075c4cad37ecfecfa501d, type: 3}
 --- !u!1 &2387938860410560953
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 2387938860410560952}
   - component: {fileID: 2387938860410560958}
   - component: {fileID: 2387938860410560959}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 8013143662957819147}
-  _rpefab: {fileID: 5902330152961633555, guid: 77443a9efd4074388b0a8a32618e4811, type: 3}
+  _prefab: {fileID: 5902330152961633555, guid: 77443a9efd4074388b0a8a32618e4811, type: 3}
 --- !u!1 &4911754157683434163
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3244424989789499120}
   - component: {fileID: 1733796255}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: FootStepSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -678,7 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 3244424989789499120}
-  _rpefab: {fileID: 8498420654738728802, guid: 5a5b3e986e9f0b04d80ac52a22127a81, type: 3}
+  _prefab: {fileID: 8498420654738728802, guid: 5a5b3e986e9f0b04d80ac52a22127a81, type: 3}
 --- !u!1 &5127444863674856227
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,6 +725,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Player
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -791,7 +794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2079752143836526270}
   - component: {fileID: 2597862678406670123}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: JumpingSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -825,4 +828,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 2079752143836526270}
-  _rpefab: {fileID: 8498420654738728802, guid: 690a2aafaa7d0174bba7006226eed4c0, type: 3}
+  _prefab: {fileID: 8498420654738728802, guid: 690a2aafaa7d0174bba7006226eed4c0, type: 3}

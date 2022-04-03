@@ -291,4 +291,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 2075758139680966744}
-  _rpefab: {fileID: 5109622421396116609, guid: 8b0b20b309f642e47b52f6f99d6d524c, type: 3}
+  _prefab: {fileID: 5109622421396116609, guid: 8b0b20b309f642e47b52f6f99d6d524c, type: 3}

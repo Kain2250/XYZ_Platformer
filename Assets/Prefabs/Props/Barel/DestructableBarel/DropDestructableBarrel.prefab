@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1461062054}
-  _rpefab: {fileID: 1615731238}
+  _prefab: {fileID: 1615731238}
 --- !u!1 &1615731238
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b88235116cf4a58b346ff453fc4e016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _count: 10
+  _count: 4
   _drop:
   - Drop: {fileID: 759196426671194958, guid: 8ce2280879a52654caefaa7758d64fc0, type: 3}
     Probability: 20
@@ -109,7 +109,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _spawnOnEnable: 0
+  _spawnOnEnable: 1
 --- !u!114 &1615731239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 426206381638403331}
-  _rpefab: {fileID: 5109622421396116609, guid: 8b0b20b309f642e47b52f6f99d6d524c, type: 3}
+  _prefab: {fileID: 1615731238}
 --- !u!114 &2075758140381803079
 MonoBehaviour:
   m_ObjectHideFlags: 0

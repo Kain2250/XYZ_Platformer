@@ -14,7 +14,6 @@ namespace OneEyedJoe.Model
         public IntProperty Coin = new IntProperty();
         public IntProperty Weapon = new IntProperty();
         
-        public bool IsArmed;
         public InventoryData Inventory => _inventory;
 
         public PlayerData Clone()

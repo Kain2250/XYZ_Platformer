@@ -9,6 +9,7 @@ TagManager:
   - DontTouchIt
   - Ineractable
   - SfxAudioSource
+  - Bulit
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - Walls
   - Enemy
   - Player
-  - 
-  - 
+  - BG
+  - Checkers
   - 
   - 
   - 

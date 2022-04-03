@@ -1,5 +1,4 @@
-﻿using System;
-using OneEyedJoe.Components.ColliderBased;
+﻿using OneEyedJoe.Components.ColliderBased;
 using OneEyedJoe.Components.Health;
 using OneEyedJoe.Model;
 using OneEyedJoe.Utils;
@@ -25,6 +24,7 @@ namespace OneEyedJoe.Creatures.Hero
         [SerializeField] private ParticleSystem _hitParticles;
 
         private static readonly int ThrowKey = Animator.StringToHash("throw");
+        private static readonly int ClimbKey = Animator.StringToHash("is-on-wall");
         
         private GameSession _session;
         private bool _isOnWall;
@@ -51,7 +51,9 @@ namespace OneEyedJoe.Creatures.Hero
         protected override void Update()
         {
             base.Update();
-            if (_wallCheck.IsTouchingLayer && Math.Abs(Direction.x - transform.localScale.x) < 0.01)
+
+            var moveToSameDirection = Direction.x * transform.lossyScale.x > 0;
+            if (_wallCheck.IsTouchingLayer && moveToSameDirection)
             {
                 _isOnWall = true;
                 Rigidbody.gravityScale = 0;
@@ -61,6 +63,8 @@ namespace OneEyedJoe.Creatures.Hero
                 _isOnWall = false;
                 Rigidbody.gravityScale = _defaultGravityScale;
             }
+            
+            Animator.SetBool(ClimbKey, _isOnWall);
         }
 
         internal void Interact()
@@ -97,14 +101,16 @@ namespace OneEyedJoe.Creatures.Hero
 
         protected override float CalculateJumpVelocity(float yVelocity)
         {
-            if (IsGrounded || !_allowDoubleJump || _doubleJumpForbidden)
-                return base.CalculateJumpVelocity(yVelocity);
+            if (!IsGrounded && _allowDoubleJump && !_doubleJumpForbidden && !_isOnWall)
+            {
+                Sounds.Play("Jump");
+                _particles.Spawn("Jump");
+                _allowDoubleJump = false;
 
-            Sounds.Play("Jump");
-            _particles.Spawn("Jump");
-            _allowDoubleJump = false;
-            
-            return _jumpForce;
+                return _jumpForce;
+            }
+
+            return base.CalculateJumpVelocity(yVelocity);
         }
         
         public void AddMoney(int count)
@@ -137,7 +143,7 @@ namespace OneEyedJoe.Creatures.Hero
         
         public override void Attack()
         {
-            if (!_session.Data.IsArmed) return;
+            if (_session.Data.Weapon.Value < 0) return;
             
             Sounds.Play("Melee");
             _particles.Spawn("SwordEffect");
@@ -146,7 +152,6 @@ namespace OneEyedJoe.Creatures.Hero
         
         public void ArmHero()
         {
-            _session.Data.IsArmed = true;
             _session.Data.Weapon.Value += 1;
 
             UpdateHeroWeapon();
@@ -154,7 +159,7 @@ namespace OneEyedJoe.Creatures.Hero
 
         private void UpdateHeroWeapon()
         {
-            Animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _unArmed;
+            Animator.runtimeAnimatorController = _session.Data.Weapon.Value > 0 ? _armed : _unArmed;
         }
         
         public void OnHealthChanged(int currentHealth)
