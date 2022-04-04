@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 4735717510759146240}
   - component: {fileID: -2407299761455315486}
   - component: {fileID: 4735717510759146270}
-  - component: {fileID: 4735717510759146269}
   - component: {fileID: 4735717510759146243}
   - component: {fileID: 6322949635409839266}
+  - component: {fileID: 9065826404996673676}
   m_Layer: 11
-  m_Name: CoinSilverParticle
+  m_Name: SilverCoinParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,9 +142,9 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4735717510759146269}
-        m_MethodName: AddMoney
-        m_Mode: 1
+      - m_Target: {fileID: 9065826404996673676}
+        m_MethodName: Add
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -199,19 +199,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectDestroy: {fileID: 4735717510759146268}
---- !u!114 &4735717510759146269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4735717510759146268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd44ca25ef77c30428005b823aaddc69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _nominal: 1
 --- !u!114 &4735717510759146243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,3 +261,17 @@ MonoBehaviour:
   _sounds:
   - _id: coin
     _clip: {fileID: 8300000, guid: a5362242c3e714ea7810e27eb85069e7, type: 3}
+--- !u!114 &9065826404996673676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4735717510759146268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d55f369f8a49f796d344641b6cd499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: Coin
+  _count: 1

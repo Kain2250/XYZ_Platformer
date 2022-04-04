@@ -11,8 +11,8 @@ namespace OneEyedJoe.Model
         [SerializeField] private InventoryData _inventory;
 
         public IntProperty Hp = new IntProperty();
-        public IntProperty Coin = new IntProperty();
-        public IntProperty Weapon = new IntProperty();
+       //public IntProperty Coin = new IntProperty();
+       //public IntProperty Weapon = new IntProperty();
         
         public InventoryData Inventory => _inventory;
 

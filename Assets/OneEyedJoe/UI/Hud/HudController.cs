@@ -10,6 +10,7 @@ namespace OneEyedJoe.UI.Hud
         [SerializeField] private ProgressBarWidget _healthBar;
         [SerializeField] private CoinWidget _coinBar;
         [SerializeField] private WeaponWidget _weaponBar;
+        [SerializeField] private PotionWidget _potionBar;
         
         private GameSession _session;
 
@@ -17,23 +18,28 @@ namespace OneEyedJoe.UI.Hud
         {
             _session = FindObjectOfType<GameSession>();
             _session.Data.Hp.OnChanged += OnHealthChanged;
-            _session.Data.Coin.OnChanged += OnCoinChanged;
-            _session.Data.Weapon.OnChanged += OnWeaponChanged;
-            
-            OnCoinChanged(_session.Data.Coin.Value, 0);
-            
-            OnWeaponChanged(_session.Data.Weapon.Value, 0);
+            _session.Data.Inventory.OnChanged += OnChangedInventory;
             
             OnHealthChanged(_session.Data.Hp.Value, 1);
+            OnChangedInventory("Sword", _session.Data.Inventory.Count("Sword"));
+            OnChangedInventory("Coin", _session.Data.Inventory.Count("Coin"));
+            OnChangedInventory("Potion", _session.Data.Inventory.Count("Potion"));
         }
-        private void OnCoinChanged(int newvalue, int oldvalue)
+
+        private void OnChangedInventory(string id, int value)
         {
-            _coinBar.SetCoinCount(newvalue);
-        }
-        
-        private void OnWeaponChanged(int newvalue, int oldvalue)
-        {
-            _weaponBar.SetWeaponCount(newvalue);
+            switch (id)
+            {
+                case "Sword":
+                    _weaponBar.SetWeaponCount(value);
+                    break;
+                case "Coin":
+                    _coinBar.SetCoinCount(value);
+                    break;
+                case "Potion":
+                    _potionBar.SetPotionCount(value);
+                    break;
+            }
         }
         
         private void OnHealthChanged(int newValue, int oldValue)
@@ -46,8 +52,7 @@ namespace OneEyedJoe.UI.Hud
         private void OnDestroy()
         {
             _session.Data.Hp.OnChanged -= OnHealthChanged;
-            _session.Data.Coin.OnChanged -= OnCoinChanged;
-            _session.Data.Weapon.OnChanged -= OnWeaponChanged;
+            _session.Data.Inventory.OnChanged -= OnChangedInventory;
         }
     }
 }

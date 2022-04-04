@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 4735717510759146241}
   - component: {fileID: 4735717510759146240}
   - component: {fileID: 4735717510759146271}
-  - component: {fileID: 180988080201371110}
   - component: {fileID: 4735717510759146270}
   - component: {fileID: 4735717510759146243}
-  - component: {fileID: 5195028281701800207}
+  - component: {fileID: 3614994436707173991}
   - component: {fileID: 6105850498881757442}
   m_Layer: 11
   m_Name: Key
@@ -117,12 +116,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Player
+  _layer:
+    serializedVersion: 2
+    m_Bits: 32768
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5195028281701800207}
-        m_MethodName: TakeIt
-        m_Mode: 1
+      - m_Target: {fileID: 3614994436707173991}
+        m_MethodName: Add
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -131,9 +133,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4735717510759146270}
-        m_MethodName: DestroyObject
-        m_Mode: 1
+      - m_Target: {fileID: 4735717510759146240}
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -150,56 +152,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: takeIt
+          m_StringArgument: takeit
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &180988080201371110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4735717510759146268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25bd868789b2e0a4c8e66c75fcbf1735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: Door+key
-  _action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Switch
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4735717510759146270}
-        m_MethodName: DestroyObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6105850498881757442}
-        m_MethodName: Play
+      - m_Target: {fileID: 4735717510759146243}
+        m_MethodName: SetClip
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: takeIt
+          m_StringArgument: destroy
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &4735717510759146270
@@ -254,8 +218,19 @@ MonoBehaviour:
     _allowNextClip: 0
     _onComplete:
       m_PersistentCalls:
-        m_Calls: []
---- !u!114 &5195028281701800207
+        m_Calls:
+        - m_Target: {fileID: 4735717510759146270}
+          m_MethodName: DestroyObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &3614994436707173991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,25 +239,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4735717510759146268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb07bedfd96a8a14ea8f5980efeb51b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 56d55f369f8a49f796d344641b6cd499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hero: {fileID: 0}
-  _target: {fileID: 0}
-  _action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4735717510759146240}
-        m_MethodName: set_isTrigger
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  _id: Key
+  _count: 1
 --- !u!114 &6105850498881757442
 MonoBehaviour:
   m_ObjectHideFlags: 0

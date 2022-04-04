@@ -1,33 +1,90 @@
 using System;
+using System.Collections.Generic;
+using OneEyedJoe.Model.Data.Properties;
+using OneEyedJoe.Model.Definition;
+using OneEyedJoe.Utils;
+using UnityEngine;
 
 namespace OneEyedJoe.Model.Data
 {
     [Serializable]
     public class InventoryData
     {
-        public int Coin
+        [SerializeField] private List<InventoryItemData> _inventory = new List<InventoryItemData>();
+
+        public delegate void OnInventoryChanged(string id, int value);
+
+        public OnInventoryChanged OnChanged;
+
+        public void Add(string id, int value)
         {
-            get => _coin;
-            set => _coin = value;
+            if (value <= 0) return;
+
+            var itemDef = DefsFacade.I.Items.Get(id);
+            if (itemDef.IsVoid) return;
+
+            var item = GetItem(id);
+            if (item == null)
+            {
+                item = new InventoryItemData(id);
+                _inventory.Add(item);
+            }
+
+            item.Value += value;
+            
+            OnChanged?.Invoke(id, Count(id));
         }
 
-        public bool IsArmed
+        public void Remove(string id, int value)
         {
-            get => _isArmed;
-            set => _isArmed = value;
+            var itemDef = DefsFacade.I.Items.Get(id);
+            if (itemDef.IsVoid) return;
+
+            var item = GetItem(id);
+            if (item == null) return;
+
+            item.Value -= value;
+            
+            if (item.Value <= 0)
+                _inventory.Remove(item);
+            
+            OnChanged?.Invoke(id, Count(id));
         }
 
-        public int Weapon
+        private InventoryItemData GetItem(string id)
         {
-            get => _weapon;
-            set => _weapon = value;
+            foreach (var itemData in _inventory)
+            {
+                if (itemData.Id == id)
+                    return itemData;
+            }
+
+            return null;
         }
+        
+        public int Count(string id)
+        {
+            var count = 0;
 
-        private int _coin;
+            foreach (var item in _inventory)
+            {
+                if (item.Id == id)
+                    count = item.Value;
+            }
 
-        private bool _isArmed;
+            return count;
+        }
+    }
 
-        private int _weapon;
+    [Serializable]
+    public class InventoryItemData
+    {
+        [InventoryId] public string Id;
+        public int Value;
 
+        public InventoryItemData(string id)
+        {
+            Id = id;
+        }
     }
 }

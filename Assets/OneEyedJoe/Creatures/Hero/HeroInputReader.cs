@@ -18,11 +18,21 @@ namespace OneEyedJoe.Creatures.Hero
 
             _inputActions.Hero.Attack.canceled += OnAttack;
             _inputActions.Hero.Interact.canceled += OnInteract;
+            _inputActions.Hero.Use.canceled += OnUse;
             _inputActions.Hero.Throw.performed += OnThrow;
             _inputActions.Hero.Pause.canceled += OnPause;
 
             _isPause = false;
         }
+
+        private void OnUse(InputAction.CallbackContext context)
+        {
+            if (context.canceled)
+            {
+                _hero.UseItemIsInventory();
+            }
+        }
+
         private void OnPause(InputAction.CallbackContext context)
         {
             if (context.canceled)

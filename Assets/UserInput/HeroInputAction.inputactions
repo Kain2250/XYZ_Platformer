@@ -22,6 +22,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Use",
+                    "type": "Button",
+                    "id": "c9545811-308f-4034-8e41-b57218fb3ebe",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "17012d86-8d8d-491d-a37d-b692db53e9f7",
@@ -198,6 +206,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ae9d6ba7-a931-4948-b680-a79e865cc167",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

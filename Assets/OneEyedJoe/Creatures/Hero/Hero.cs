@@ -1,4 +1,5 @@
-﻿using OneEyedJoe.Components.ColliderBased;
+﻿using System;
+using OneEyedJoe.Components.ColliderBased;
 using OneEyedJoe.Components.Health;
 using OneEyedJoe.Model;
 using OneEyedJoe.Utils;
@@ -30,6 +31,10 @@ namespace OneEyedJoe.Creatures.Hero
         private bool _isOnWall;
         private bool _allowDoubleJump;
 
+        private int SwordCount => _session.Data.Inventory.Count("Sword");
+        private int CoinCount => _session.Data.Inventory.Count("Coin");
+        private int UseItemCount => _session.Data.Inventory.Count("Potion");
+
         protected override void Awake()
         {
             base.Awake();
@@ -43,9 +48,16 @@ namespace OneEyedJoe.Creatures.Hero
         {
             _session = FindObjectOfType<GameSession>();
             var health = GetComponent<HealthComponent>();
+            _session.Data.Inventory.OnChanged += OnChangeInventory;
 
             health.SetHealth(_session.Data.Hp.Value);
             UpdateHeroWeapon();
+        }
+
+        private void OnChangeInventory(string id, int value)
+        {
+            if (id == "Sword")
+                UpdateHeroWeapon();
         }
 
         protected override void Update()
@@ -112,17 +124,18 @@ namespace OneEyedJoe.Creatures.Hero
 
             return base.CalculateJumpVelocity(yVelocity);
         }
-        
-        public void AddMoney(int count)
-        {
-            _session.Data.Coin.Value += count;
-            //Debug.Log($"In the piggy bank + {count} coins. Total: {_session.Data.Coin.Value}");
-        }
 
+        
+        public void AddInInventory(string id, int value)
+        {
+            _session.Data.Inventory.Add(id, value);
+        }
+        
         public override void TakeDamage()
         {
             base.TakeDamage();
-            if (_session.Data.Coin.Value > 0)
+            
+            if (CoinCount > 0)
             {
                 SpawnCoins();
             }
@@ -130,8 +143,8 @@ namespace OneEyedJoe.Creatures.Hero
 
         private void SpawnCoins()
         {
-            var numCoinsToDispose = Mathf.Min(_session.Data.Coin.Value, 5);
-            _session.Data.Coin.Value -= numCoinsToDispose;
+            var numCoinsToDispose = Mathf.Min(CoinCount, 5);
+            _session.Data.Inventory.Remove("Coin", numCoinsToDispose);
 
             var burst = _hitParticles.emission.GetBurst(0);
             burst.count = numCoinsToDispose;
@@ -143,23 +156,16 @@ namespace OneEyedJoe.Creatures.Hero
         
         public override void Attack()
         {
-            if (_session.Data.Weapon.Value < 0) return;
+            if (SwordCount < 0) return;
             
             Sounds.Play("Melee");
             _particles.Spawn("SwordEffect");
             base.Attack();
         }
         
-        public void ArmHero()
-        {
-            _session.Data.Weapon.Value += 1;
-
-            UpdateHeroWeapon();
-        }
-
         private void UpdateHeroWeapon()
         {
-            Animator.runtimeAnimatorController = _session.Data.Weapon.Value > 0 ? _armed : _unArmed;
+            Animator.runtimeAnimatorController = SwordCount > 0 ? _armed : _unArmed;
         }
         
         public void OnHealthChanged(int currentHealth)
@@ -169,12 +175,14 @@ namespace OneEyedJoe.Creatures.Hero
 
         public void OnWeaponCountChanged(int currentWeaponCount)
         {
-            _session.Data.Weapon.Value = currentWeaponCount;
+            var currentCountSwords = currentWeaponCount - SwordCount;
+            
+            AddInInventory("Sword", currentCountSwords);
         }
 
         public void Throw()
         {
-            if (_throwCooldown.IsReady && _armed && _session.Data.Weapon.Value > 1)
+            if (_throwCooldown.IsReady && _armed && SwordCount > 1)
             {
                 Animator.SetTrigger(ThrowKey);
                 _throwCooldown.Reset();
@@ -183,10 +191,24 @@ namespace OneEyedJoe.Creatures.Hero
 
         public void OnDoThrow()
         {
-            if (_session.Data.Weapon.Value > 1)
+            if (SwordCount > 1)
             {
                 _particles.Spawn("Throw");
-                _session.Data.Weapon.Value -= 1;
+                _session.Data.Inventory.Remove("Sword", 1);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            _session.Data.Inventory.OnChanged -= OnChangeInventory;
+        }
+
+        public void UseItemIsInventory()
+        {
+            if (UseItemCount > 0)
+            {
+                _session.Data.Inventory.Remove("Potion", 1);
+                _session.Data.Hp.Value += 1;
             }
         }
     }

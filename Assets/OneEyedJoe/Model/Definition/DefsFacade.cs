@@ -7,8 +7,10 @@ namespace OneEyedJoe.Model.Definition
     public class DefsFacade : ScriptableObject
     {
         [SerializeField] private PlayerDef _player;
-
+        [SerializeField] private InventoryItemsDef _items;
+        
         public PlayerDef Player => _player;
+        public InventoryItemsDef Items => _items;
 
         private static DefsFacade _instance;
         public static DefsFacade I => _instance == null ? LoadDefs() : _instance;

@@ -3,335 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="b56f142a-83c9-4c28-8dff-76e55f4a3ccd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ColliderBased/EnterTriger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/ColliderBased/EnterTriger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/DestroyObjectComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/DestroyObjectComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/ProbabilityDropComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/ProbabilityDropComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/CoinComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/CoinComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/ArmHeroComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/ArmHeroComponent.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Weapons/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Weapons/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/HeroInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/HeroInputReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/InventoryData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/InventoryData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/DefsFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/DefsFacade.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Hit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Hit.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Throw.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Throw.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/_ArmedHero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/_ArmedHero.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Unarmed/_UnarmedHero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Unarmed/_UnarmedHero.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sharky/Animations/Armed/Dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sharky/Animations/Armed/Dead.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sharky/Animations/Armed/Die.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sharky/Animations/Armed/Die.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sharky/Animations/Armed/_Sharky.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sharky/Animations/Armed/_Sharky.overrideController" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sharky/Sharky.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sharky/Sharky.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects/SwordProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects/SwordProjectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutScenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutScenes/ShowController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CutScenes/ShowController.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decor/PalmTreeBackgroundSheet_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Decor/PalmTreeBackgroundSheet_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decor/PalmTreeBackgroundSheet_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Decor/PalmTreeBackgroundSheet_4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decor/PalmTreeBackgroundSheet_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Decor/PalmTreeBackgroundSheet_5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DestructableBarrel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DestructableBarrel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DropDestructableBarrel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DropDestructableBarrel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/CoinGold.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/CoinGold.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/CoinGoldParticle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/CoinGoldParticle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/CoinSilver.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/CoinSilver.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/CoinSilverParticle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/CoinSilverParticle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/PotionsHealthLarge.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/PotionsHealthLarge.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/PotionsHealthMana.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/PotionsHealthMana.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/PotionsHealthSmall.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/PotionsHealthSmall.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/StuckedSword.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/StuckedSword.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Sword.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Sword.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Spikes.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Spikes.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Hud/HudController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Hud/HudController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects/SwordAttackParticles.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects/SwordAttackParticles.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects/SwordProjectile.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects/SwordProjectile.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoinParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoinParticle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinLevitate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinLevitate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinParticle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Key.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Key.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Poutions/PotionsHealthLarge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Poutions/PotionsHealthLarge.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/StuckedSword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/StuckedSword.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/Sword.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Door/Door+Key Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Door/Door+Key Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Traps/Totems/Heads/Head_1/MiddleHead/MiddleHead_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Traps/Totems/Heads/Head_1/MiddleHead/MiddleHead_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Traps/Totems/Heads/Head_1/UpperHead/UpperHead_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Traps/Totems/Heads/Head_1/UpperHead/UpperHead_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DefsFacade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DefsFacade.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Hud.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Hud.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Spikes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Spikes.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Pearl Destroyed.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Pearl Destroyed/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Pearl Destroyed/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Pearl Destroyed/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Pearl Destroyed/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Pearl Destroyed/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Pearl Destroyed/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Pearl Idle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Pearl Idle/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Pearl Idle/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Destroyed/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Fire/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Hit.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Hit/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Hit/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Hit/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Hit/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Hit/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Hit/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Hit/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Hit/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Idle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Idle/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Idle/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 1/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Attack 2/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Destroyed/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 1/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 1/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 1/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 1/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 1/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 1/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 1/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 1/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 2/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 2/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 2/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 2/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 2/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 2/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Hit 2/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Idle 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Idle 1/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Idle 1/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Idle 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Idle 2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 1/Idle 2/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 1/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Attack 2/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Destroyed/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 1/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 1/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 1/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 1/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 1/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 1/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 1/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 1/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 2/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 2/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 2/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 2/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 2/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 2/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Hit 2/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Idle 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Idle 1/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Idle 1/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Idle 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Idle 2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 2/Idle 2/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 1/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Attack 2/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Destroyed/6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 1/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 1/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 1/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 1/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 1/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 1/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 1/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 1/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 2/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 2/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 2/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 2/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 2/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 2/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Hit 2/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Idle 1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Idle 1/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Idle 1/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Idle 2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Idle 2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Head 3/Idle 2/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Destroyed.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Destroyed/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Destroyed/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Destroyed/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Destroyed/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Destroyed/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Destroyed/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Idle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Idle/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Shooter Traps/Sprites/Totems/Wood Spike/Idle/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.inputactions" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,15 +47,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/MobAi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp2_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/ColliderBased/EnterTriggerComponent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/GoBased/RandomSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Health/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/DestroyObjectComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/DelayDestroyObjectComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/ArmHeroComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Audio/PlaySoundsComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp2_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/ColliderBased/EnterTriggerComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/PointPatrol.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/GoBased/RandomSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/Patrol.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Health/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -425,7 +129,8 @@
       <workItem from="1648565930571" duration="787000" />
       <workItem from="1648758944312" duration="7477000" />
       <workItem from="1648842029196" duration="3397000" />
-      <workItem from="1649003910710" duration="9714000" />
+      <workItem from="1649003910710" duration="10721000" />
+      <workItem from="1649069712009" duration="20538000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <created>1637860980398</created>
@@ -441,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647803746550</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Traps Lesson">
+      <created>1649025452127</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649025452127</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +178,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Fix" />
     <MESSAGE value="RandomDrop" />
-    <option name="LAST_COMMIT_MESSAGE" value="RandomDrop" />
+    <MESSAGE value="Traps Lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Traps Lesson" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 7806357988954954377}
   - component: {fileID: 4735717510759146271}
   - component: {fileID: 4735717510759146270}
-  - component: {fileID: 4735717510759146269}
   - component: {fileID: 4735717510759146243}
   - component: {fileID: 6322949635409839266}
   - component: {fileID: 6543190203072347359}
+  - component: {fileID: -3268843565999672559}
   m_Layer: 11
   m_Name: SilverCoinLevitate
   m_TagString: Untagged
@@ -146,9 +146,9 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4735717510759146269}
-        m_MethodName: AddMoney
-        m_Mode: 1
+      - m_Target: {fileID: -3268843565999672559}
+        m_MethodName: Add
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -203,19 +203,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectDestroy: {fileID: 4735717510759146268}
---- !u!114 &4735717510759146269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4735717510759146268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd44ca25ef77c30428005b823aaddc69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _nominal: 1
 --- !u!114 &4735717510759146243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,3 +279,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _frequency: 6
   _amplitude: 0.1
+  _randomize: 0
+--- !u!114 &-3268843565999672559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4735717510759146268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d55f369f8a49f796d344641b6cd499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: Coin
+  _count: 1

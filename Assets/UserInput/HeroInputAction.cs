@@ -35,6 +35,14 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""Use"",
+                    ""type"": ""Button"",
+                    ""id"": ""c9545811-308f-4034-8e41-b57218fb3ebe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""17012d86-8d8d-491d-a37d-b692db53e9f7"",
@@ -213,6 +221,17 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                     ""action"": ""Throw"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ae9d6ba7-a931-4948-b680-a79e865cc167"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Use"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -223,6 +242,7 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
         m_Hero = asset.FindActionMap("Hero", throwIfNotFound: true);
         m_Hero_AxisMovement = m_Hero.FindAction("AxisMovement", throwIfNotFound: true);
         m_Hero_Interact = m_Hero.FindAction("Interact", throwIfNotFound: true);
+        m_Hero_Use = m_Hero.FindAction("Use", throwIfNotFound: true);
         m_Hero_Attack = m_Hero.FindAction("Attack", throwIfNotFound: true);
         m_Hero_Pause = m_Hero.FindAction("Pause", throwIfNotFound: true);
         m_Hero_Throw = m_Hero.FindAction("Throw", throwIfNotFound: true);
@@ -277,6 +297,7 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
     private IHeroActions m_HeroActionsCallbackInterface;
     private readonly InputAction m_Hero_AxisMovement;
     private readonly InputAction m_Hero_Interact;
+    private readonly InputAction m_Hero_Use;
     private readonly InputAction m_Hero_Attack;
     private readonly InputAction m_Hero_Pause;
     private readonly InputAction m_Hero_Throw;
@@ -286,6 +307,7 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
         public HeroActions(@HeroInputAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @AxisMovement => m_Wrapper.m_Hero_AxisMovement;
         public InputAction @Interact => m_Wrapper.m_Hero_Interact;
+        public InputAction @Use => m_Wrapper.m_Hero_Use;
         public InputAction @Attack => m_Wrapper.m_Hero_Attack;
         public InputAction @Pause => m_Wrapper.m_Hero_Pause;
         public InputAction @Throw => m_Wrapper.m_Hero_Throw;
@@ -304,6 +326,9 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                 @Interact.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnInteract;
+                @Use.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnUse;
+                @Use.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnUse;
+                @Use.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnUse;
                 @Attack.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
@@ -323,6 +348,9 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @Use.started += instance.OnUse;
+                @Use.performed += instance.OnUse;
+                @Use.canceled += instance.OnUse;
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
@@ -340,6 +368,7 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
     {
         void OnAxisMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnUse(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnThrow(InputAction.CallbackContext context);

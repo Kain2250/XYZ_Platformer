@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4735717510759146271}
   - component: {fileID: 4735717510759146270}
   - component: {fileID: 4735717510759146243}
-  - component: {fileID: 8881877574821411335}
+  - component: {fileID: 9068583900280655761}
   m_Layer: 11
   m_Name: Sword
   m_TagString: Untagged
@@ -115,6 +115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Player
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -129,8 +132,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8881877574821411335}
-        m_MethodName: ArmHero
+      - m_Target: {fileID: 9068583900280655761}
+        m_MethodName: Add
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -193,7 +196,7 @@ MonoBehaviour:
     _onComplete:
       m_PersistentCalls:
         m_Calls: []
---- !u!114 &8881877574821411335
+--- !u!114 &9068583900280655761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,6 +205,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4735717510759146268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c35f4773e3485392dbb1867ede3942, type: 3}
+  m_Script: {fileID: 11500000, guid: 56d55f369f8a49f796d344641b6cd499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: Sword
+  _count: 1
