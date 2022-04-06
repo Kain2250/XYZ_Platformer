@@ -3,39 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="b56f142a-83c9-4c28-8dff-76e55f4a3ccd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/CoinComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/CoinComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/ArmHeroComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/ArmHeroComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Definitions/InventoryItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Definitions/InventoryItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Definitions/PlayerDef.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Definitions/PlayerDef.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/InventoryAddComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/InventoryAddComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/RequireItemComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/RequireItemComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/HeroInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/HeroInputReader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/InventoryData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/InventoryData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/DefsFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/DefsFacade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/PlayerDef.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/PlayerDef.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/PlayerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Hud/HudController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Hud/HudController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects/SwordAttackParticles.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects/SwordAttackParticles.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects/SwordProjectile.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Sword/SwordEffects/SwordProjectile.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/_ArmedHero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/_ArmedHero.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DropDestructableBarrel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DropDestructableBarrel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoinParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoinParticle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinLevitate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinLevitate.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinParticle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Key.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Key.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Poutions/PotionsHealthLarge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Poutions/PotionsHealthLarge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/StuckedSword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/StuckedSword.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/Sword.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Door/Door+Key Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Door/Door+Key Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Traps/Totems/Heads/Head_1/MiddleHead/MiddleHead_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Traps/Totems/Heads/Head_1/MiddleHead/MiddleHead_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Traps/Totems/Heads/Head_1/UpperHead/UpperHead_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Traps/Totems/Heads/Head_1/UpperHead/UpperHead_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DefsFacade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DefsFacade.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Hud.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Hud.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.inputactions" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +37,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/MobAi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp2_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/ColliderBased/EnterTriggerComponent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/GoBased/RandomSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Health/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/DestroyObjectComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/DelayDestroyObjectComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Audio/PlaySoundsComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/8b/9ceb268b/NormalizationForm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp2_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/ColliderBased/EnterTriggerComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/PointPatrol.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/GoBased/RandomSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/Patrol.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" root0="FORCE_HIGHLIGHTING" />
@@ -130,7 +117,9 @@
       <workItem from="1648758944312" duration="7477000" />
       <workItem from="1648842029196" duration="3397000" />
       <workItem from="1649003910710" duration="10721000" />
-      <workItem from="1649069712009" duration="20538000" />
+      <workItem from="1649069712009" duration="20703000" />
+      <workItem from="1649167770537" duration="12497000" />
+      <workItem from="1649243137891" duration="9646000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <created>1637860980398</created>
@@ -153,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649025452127</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add inventory">
+      <created>1649112034618</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649112034618</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +175,8 @@
     <MESSAGE value="Fix" />
     <MESSAGE value="RandomDrop" />
     <MESSAGE value="Traps Lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="Traps Lesson" />
+    <MESSAGE value="Add inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add inventory" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

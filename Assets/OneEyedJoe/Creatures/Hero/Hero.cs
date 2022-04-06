@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Text;
 using OneEyedJoe.Components.ColliderBased;
+using OneEyedJoe.Components.GoBased;
 using OneEyedJoe.Components.Health;
 using OneEyedJoe.Model;
 using OneEyedJoe.Utils;
@@ -13,6 +15,7 @@ namespace OneEyedJoe.Creatures.Hero
         [SerializeField] private bool _doubleJumpForbidden;
         [SerializeField] private float _defaultGravityScale;
         [SerializeField] private LayerCheck _wallCheck;
+        [SerializeField] private SpawnDropComponent _spawnDrop;
 
         [SerializeField] private Cooldown _throwCooldown;
 
@@ -156,7 +159,7 @@ namespace OneEyedJoe.Creatures.Hero
         
         public override void Attack()
         {
-            if (SwordCount < 0) return;
+            if (SwordCount <= 0) return;
             
             Sounds.Play("Melee");
             _particles.Spawn("SwordEffect");
@@ -207,9 +210,22 @@ namespace OneEyedJoe.Creatures.Hero
         {
             if (UseItemCount > 0)
             {
+                var potionValue = _session.Data.Inventory.GetValue("Potion");
+                GetComponent<HealthComponent>().Apply(potionValue);
+                
                 _session.Data.Inventory.Remove("Potion", 1);
-                _session.Data.Hp.Value += 1;
             }
+        }
+
+        public void Drop(GameObject go)
+        {
+            var oldName = go.name;
+            if (oldName.Contains("(Clone)"))
+            {
+                go.name = oldName.Replace("(Clone)", String.Empty);
+            }
+            
+            _spawnDrop.Spawn(go);
         }
     }
 }

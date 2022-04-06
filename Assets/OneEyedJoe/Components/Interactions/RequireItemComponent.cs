@@ -21,7 +21,7 @@ namespace OneEyedJoe.Components.Interactions
             foreach (var item in _required)
             {
                 var numItems = session.Data.Inventory.Count(item.Id);
-                if (numItems < item.Value)
+                if (numItems < item.CountItem)
                     areAllRequirementsMet = false;
             }
             
@@ -30,7 +30,7 @@ namespace OneEyedJoe.Components.Interactions
                 if (_removeAfterUse)
                 {
                     foreach (var item in _required)
-                        session.Data.Inventory.Remove(item.Id, item.Value);
+                        session.Data.Inventory.Remove(item.Id, item.CountItem);
                 }
                 _onSuccess?.Invoke();
             }

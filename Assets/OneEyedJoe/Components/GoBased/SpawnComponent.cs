@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using OneEyedJoe.Model;
+using UnityEngine;
 
 namespace OneEyedJoe.Components.GoBased
 {

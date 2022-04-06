@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using OneEyedJoe.Model.Data.Properties;
+using System.Linq;
 using OneEyedJoe.Model.Definition;
-using OneEyedJoe.Utils;
 using UnityEngine;
 
 namespace OneEyedJoe.Model.Data
@@ -11,44 +10,66 @@ namespace OneEyedJoe.Model.Data
     public class InventoryData
     {
         [SerializeField] private List<InventoryItemData> _inventory = new List<InventoryItemData>();
-
-        public delegate void OnInventoryChanged(string id, int value);
-
+        
+        public delegate void OnInventoryChanged(string id, int countValue);
         public OnInventoryChanged OnChanged;
-
-        public void Add(string id, int value)
+        
+        public bool IsFull()
         {
-            if (value <= 0) return;
+            var sizeInventory = DefsFacade.I.Items.GetSizeInventory();
 
-            var itemDef = DefsFacade.I.Items.Get(id);
+            if (_inventory != null)
+                return _inventory.Count >= sizeInventory;
+            return default;
+        }
+
+        public bool IsStacked(string id)
+        {
+            var itemDef = DefsFacade.I.Items.GetId(id);
+
+            return itemDef.IsStacked;
+        }
+
+        public void Add(string id, int countValue)
+        {
+            
+            if (countValue <= 0 ) return;
+
+            var itemDef = DefsFacade.I.Items.GetId(id);
             if (itemDef.IsVoid) return;
 
             var item = GetItem(id);
-            if (item == null)
+            if (item == null || !itemDef.IsStacked)
             {
                 item = new InventoryItemData(id);
                 _inventory.Add(item);
             }
 
-            item.Value += value;
+            item.CountItem += countValue;
             
             OnChanged?.Invoke(id, Count(id));
         }
 
-        public void Remove(string id, int value)
+        public void Remove(string id, int countValue)
         {
-            var itemDef = DefsFacade.I.Items.Get(id);
+            var itemDef = DefsFacade.I.Items.GetId(id);
             if (itemDef.IsVoid) return;
 
             var item = GetItem(id);
             if (item == null) return;
 
-            item.Value -= value;
+            item.CountItem -= countValue;
             
-            if (item.Value <= 0)
+            if (item.CountItem <= 0)
                 _inventory.Remove(item);
             
             OnChanged?.Invoke(id, Count(id));
+        }
+
+        public int GetValue(string id)
+        {
+            var itemDef = DefsFacade.I.Items.GetId(id);
+            return itemDef.IsVoid ? 0 : itemDef.GetValue;
         }
 
         private InventoryItemData GetItem(string id)
@@ -69,7 +90,7 @@ namespace OneEyedJoe.Model.Data
             foreach (var item in _inventory)
             {
                 if (item.Id == id)
-                    count = item.Value;
+                    count = item.CountItem;
             }
 
             return count;
@@ -80,7 +101,7 @@ namespace OneEyedJoe.Model.Data
     public class InventoryItemData
     {
         [InventoryId] public string Id;
-        public int Value;
+        public int CountItem;
 
         public InventoryItemData(string id)
         {

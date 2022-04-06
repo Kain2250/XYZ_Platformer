@@ -127,7 +127,6 @@ namespace OneEyedJoe.Creatures
         {
             Animator.SetTrigger(IsAttack);
         }
-
-
+        
     }
 }

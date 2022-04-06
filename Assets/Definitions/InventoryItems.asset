@@ -12,8 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f7a877555f4eacaa7c03a425f36eeb, type: 3}
   m_Name: InventoryItems
   m_EditorClassIdentifier: 
+  _sizeInventory: 6
   _items:
   - _id: Coin
+    _isStacked: 1
+    _value: 0
   - _id: Sword
+    _isStacked: 1
+    _value: 0
   - _id: Key
+    _isStacked: 0
+    _value: 0
   - _id: Potion
+    _isStacked: 0
+    _value: 10

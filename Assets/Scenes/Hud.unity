@@ -600,7 +600,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _first: {fileID: 7640956}
   _second: {fileID: 857130650}
-  _sprites: []
+  _sprites:
+  - {fileID: 21300000, guid: 9c024a0622b11de44b804be4f77de223, type: 3}
+  - {fileID: 21300000, guid: f450f8858625fb34ea1a84c78c9b8925, type: 3}
+  - {fileID: 21300000, guid: 819980c1ff9a05d459483b4e47ec2a20, type: 3}
+  - {fileID: 21300000, guid: 83e142f3c459e3f4499a0b916aab105d, type: 3}
+  - {fileID: 21300000, guid: 9ad7d601ebde8184b81192e4c389a29e, type: 3}
+  - {fileID: 21300000, guid: 95815ca3120004945b7fa9ee5ae1edd3, type: 3}
+  - {fileID: 21300000, guid: 4a9ca233175b79741a3985a3412bd0c1, type: 3}
+  - {fileID: 21300000, guid: 3f954aaabd745e94486bfaec2e7be5ce, type: 3}
+  - {fileID: 21300000, guid: 0a11b068ea7be1b419600472e2778b8d, type: 3}
+  - {fileID: 21300000, guid: 0980f039f8f8f364bb7169c17612199b, type: 3}
 --- !u!1 &857130648
 GameObject:
   m_ObjectHideFlags: 0

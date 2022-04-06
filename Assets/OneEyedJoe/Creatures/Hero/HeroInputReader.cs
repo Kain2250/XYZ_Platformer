@@ -82,6 +82,7 @@ namespace OneEyedJoe.Creatures.Hero
             _inputActions.Hero.AxisMovement.performed -= OnAxisMovement;
             _inputActions.Hero.AxisMovement.canceled -= OnAxisMovement;
 
+            _inputActions.Hero.Use.canceled -= OnUse;
             _inputActions.Hero.Attack.canceled -= OnAttack;
             _inputActions.Hero.Interact.canceled -= OnInteract;
             _inputActions.Hero.Pause.canceled -= OnPause;
