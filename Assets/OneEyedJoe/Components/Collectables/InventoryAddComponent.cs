@@ -24,9 +24,15 @@ namespace OneEyedJoe.Components.Collectables
             if (hero == null) return;
             
             var isFull = _session.Data.Inventory.IsFull();
+            var itemIsPresent = _session.Data.Inventory.IsItemPresentInInventory(_id);
             var isStacked = _session.Data.Inventory.IsStacked(_id);
-                
-            if (isFull && !isStacked)
+
+            if (itemIsPresent && isFull && isStacked)
+            {
+                hero.AddInInventory(_id, _count);
+                return;
+            }
+            if (isFull)
             {
                 hero.Drop(gameObject);
             }

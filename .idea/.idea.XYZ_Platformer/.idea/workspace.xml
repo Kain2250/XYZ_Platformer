@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b56f142a-83c9-4c28-8dff-76e55f4a3ccd" name="Changes" comment="">
+    <list default="true" id="b56f142a-83c9-4c28-8dff-76e55f4a3ccd" name="Changes" comment="Fix Inventory">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Definitions/InventoryItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Definitions/InventoryItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Definitions/PlayerDef.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Definitions/PlayerDef.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/InventoryAddComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/InventoryAddComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/RequireItemComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Interactions/RequireItemComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/HeroInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/HeroInputReader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/InventoryData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/InventoryData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/PlayerDef.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/PlayerDef.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Hud/HudController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Hud/HudController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/_ArmedHero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/_ArmedHero.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DropDestructableBarrel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DropDestructableBarrel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoinParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoinParticle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinLevitate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinLevitate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinParticle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Hud.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Hud.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/Sword.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +17,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/MobAi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp2_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/ColliderBased/EnterTriggerComponent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/GoBased/RandomSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a1ac446df41c4a67becf2f8317dc1792116800/ff/8042796d/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/59/afb260d2/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/8b/9ceb268b/NormalizationForm.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp2_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/ColliderBased/EnterTriggerComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/PointPatrol.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/GoBased/RandomSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/Patrol.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" root0="FORCE_HIGHLIGHTING" />
@@ -81,10 +65,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12480">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="12480" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -119,7 +103,7 @@
       <workItem from="1649003910710" duration="10721000" />
       <workItem from="1649069712009" duration="20703000" />
       <workItem from="1649167770537" duration="12497000" />
-      <workItem from="1649243137891" duration="9646000" />
+      <workItem from="1649243137891" duration="19311000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <created>1637860980398</created>
@@ -149,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649112034618</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix Inventory">
+      <created>1649270342263</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649270342263</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +167,46 @@
     <MESSAGE value="RandomDrop" />
     <MESSAGE value="Traps Lesson" />
     <MESSAGE value="Add inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add inventory" />
+    <MESSAGE value="Fix Inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Inventory" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs</url>
+          <line>19</line>
+          <properties documentPath="D:\ProgramFiles\Projects\XYZ_Platformer\Assets\OneEyedJoe\Model\Definition\InventoryItemsDef.cs" initialLine="19" containingFunctionPresentation="method 'GetId'">
+            <startOffsets>
+              <option value="526" />
+            </startOffsets>
+            <endOffsets>
+              <option value="557" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/InventoryAddComponent.cs</url>
+          <line>27</line>
+          <properties documentPath="D:\ProgramFiles\Projects\XYZ_Platformer\Assets\OneEyedJoe\Components\Collectables\InventoryAddComponent.cs" initialLine="27" containingFunctionPresentation="method 'Add'">
+            <startOffsets>
+              <option value="785" />
+            </startOffsets>
+            <endOffsets>
+              <option value="840" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="DefsFacade.I.Items.GetId(_id).IsVoid" language="C#" />
+        <watch expression="this._session.Data.Inventory._inventory" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
