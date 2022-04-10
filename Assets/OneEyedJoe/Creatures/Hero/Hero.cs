@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Text;
 using OneEyedJoe.Components.ColliderBased;
 using OneEyedJoe.Components.GoBased;
 using OneEyedJoe.Components.Health;
 using OneEyedJoe.Model;
+using OneEyedJoe.Model.Data;
+using OneEyedJoe.Model.Definition;
 using OneEyedJoe.Utils;
 using UnityEngine;
 
 namespace OneEyedJoe.Creatures.Hero
 {
-    public class Hero : Creature
+    public class Hero : Creature, ICanAddInventory, ICanDropItem
     {
         [SerializeField] private float _landingVelocity;
         [SerializeField] private bool _doubleJumpForbidden;
@@ -127,7 +128,6 @@ namespace OneEyedJoe.Creatures.Hero
 
             return base.CalculateJumpVelocity(yVelocity);
         }
-
         
         public void AddInInventory(string id, int value)
         {
@@ -175,14 +175,7 @@ namespace OneEyedJoe.Creatures.Hero
         {
             _session.Data.Hp.Value = currentHealth;
         }
-
-        public void OnWeaponCountChanged(int currentWeaponCount)
-        {
-            var currentCountSwords = currentWeaponCount - SwordCount;
-            
-            AddInInventory("Sword", currentCountSwords);
-        }
-
+        
         public void Throw()
         {
             if (_throwCooldown.IsReady && _armed && SwordCount > 1)
@@ -208,12 +201,19 @@ namespace OneEyedJoe.Creatures.Hero
 
         public void UseItemIsInventory()
         {
-            if (UseItemCount > 0)
+            var id = "Potion";
+
+            if (UseItemCount <= 0) return;
+            
+            if (id == "Potion")
             {
-                var potionValue = _session.Data.Inventory.GetValue("Potion");
-                GetComponent<HealthComponent>().Apply(potionValue);
+                var potionValue = _session.Data.Inventory.GetValue(id);
+                var currentHeals = _session.Data.Hp.Value;
+                if (potionValue + currentHeals >= DefsFacade.I.Player.MaxHealth)
+                    potionValue = DefsFacade.I.Player.MaxHealth - currentHeals;
                 
-                _session.Data.Inventory.Remove("Potion", 1);
+                GetComponent<HealthComponent>().Apply(potionValue);
+                _session.Data.Inventory.Remove(id, 1);
             }
         }
 
@@ -228,4 +228,5 @@ namespace OneEyedJoe.Creatures.Hero
             _spawnDrop.Spawn(go);
         }
     }
+
 }

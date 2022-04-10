@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2755968602976414191}
   - component: {fileID: 4220628816928893578}
   - component: {fileID: 1458752681966600050}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: PotionsHealthLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ MonoBehaviour:
   _tag: Player
   _layer:
     serializedVersion: 2
-    m_Bits: 32768
+    m_Bits: 33792
   _action:
     m_PersistentCalls:
       m_Calls:

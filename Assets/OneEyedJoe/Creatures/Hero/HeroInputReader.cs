@@ -1,5 +1,8 @@
-﻿using UnityEngine;
+﻿using OneEyedJoe.Model;
+using OneEyedJoe.UI.MainMenu;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace OneEyedJoe.Creatures.Hero
 {
@@ -8,10 +11,12 @@ namespace OneEyedJoe.Creatures.Hero
         [SerializeField] private Hero _hero;
 
         private HeroInputAction _inputActions;
-        private bool _isPause;
+        private GameSession _session;
 
         private void Awake()
         {
+            _session = FindObjectOfType<GameSession>();
+            
             _inputActions = new HeroInputAction();
             _inputActions.Hero.AxisMovement.performed += OnAxisMovement;
             _inputActions.Hero.AxisMovement.canceled += OnAxisMovement;
@@ -21,8 +26,6 @@ namespace OneEyedJoe.Creatures.Hero
             _inputActions.Hero.Use.canceled += OnUse;
             _inputActions.Hero.Throw.performed += OnThrow;
             _inputActions.Hero.Pause.canceled += OnPause;
-
-            _isPause = false;
         }
 
         private void OnUse(InputAction.CallbackContext context)
@@ -37,8 +40,13 @@ namespace OneEyedJoe.Creatures.Hero
         {
             if (context.canceled)
             {
-                _isPause = !_isPause;
-                Time.timeScale = _isPause ? 0 : 1f;
+                _session.IsPause = !_session.IsPause;
+                Time.timeScale = _session.IsPause ? 0 : 1f;
+
+                if (_session.IsPause)
+                    SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+                else
+                    SceneManager.UnloadSceneAsync("PauseMenu");
             }
         }
 

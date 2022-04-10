@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using JetBrains.Annotations;
 using OneEyedJoe.Model.Definition;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 namespace OneEyedJoe.Model.Data
@@ -16,7 +17,9 @@ namespace OneEyedJoe.Model.Data
         
         public bool IsFull()
         {
-            var sizeInventory = DefsFacade.I.Items.GetSizeInventory();
+            var sizeInventory = DefsFacade.I.Player.SizeInventory;
+
+            if (sizeInventory == 0) return false;
 
             if (_inventory != null)
                 return _inventory.Count >= sizeInventory;
@@ -38,7 +41,6 @@ namespace OneEyedJoe.Model.Data
 
         public void Add(string id, int countValue)
         {
-            
             if (countValue <= 0 ) return;
 
             var itemDef = DefsFacade.I.Items.GetId(id);
@@ -49,19 +51,6 @@ namespace OneEyedJoe.Model.Data
             else
                 AddNonStackItem(id, countValue);
 
-            OnChanged?.Invoke(id, Count(id));
-        }
-
-        public void Remove(string id, int countValue)
-        {
-            var itemDef = DefsFacade.I.Items.GetId(id);
-            if (itemDef.IsVoid) return;
-
-            if (itemDef.IsStacked)
-                RemoveStackItem(id, countValue);
-            else
-                RemoveNonStackItem(id, countValue);
-            
             OnChanged?.Invoke(id, Count(id));
         }
         
@@ -89,7 +78,19 @@ namespace OneEyedJoe.Model.Data
                 _inventory.Add(item);
             }
         }
+        
+        public void Remove(string id, int countValue)
+        {
+            var itemDef = DefsFacade.I.Items.GetId(id);
+            if (itemDef.IsVoid) return;
 
+            if (itemDef.IsStacked)
+                RemoveStackItem(id, countValue);
+            else
+                RemoveNonStackItem(id, countValue);
+            
+            OnChanged?.Invoke(id, Count(id));
+        }
 
         private void RemoveStackItem(string id, int countValue)
         {
@@ -101,6 +102,7 @@ namespace OneEyedJoe.Model.Data
             if (item.CountItem <= 0)
                 _inventory.Remove(item);
         }
+        
         private void RemoveNonStackItem(string id, int countValue)
         {
             for (int i = 0; i < countValue; i++)
@@ -137,6 +139,19 @@ namespace OneEyedJoe.Model.Data
             {
                 if (item.Id == id)
                     count = item.CountItem;
+            }
+
+            return count;
+        }
+
+        public int CountAll(string id)
+        {
+            var count = 0;
+            
+            foreach (var itemData in _inventory)
+            {
+                if (itemData.Id == id)
+                    count++;
             }
 
             return count;

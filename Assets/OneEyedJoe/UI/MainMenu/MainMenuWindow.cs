@@ -1,4 +1,5 @@
 using System;
+using OneEyedJoe.Model;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,8 +12,20 @@ namespace OneEyedJoe.UI.MainMenu
         public void OnShowSettings()
         {
             var window = Resources.Load<GameObject>("UI/Settings");
-            var canvas = FindObjectOfType<Canvas>();
-            Instantiate(window, canvas.transform);
+            
+            var canvas = FindObjectsOfType<Canvas>();
+            
+            Instantiate(window, canvas[canvas.Length > 1 ? 1 : 0].transform);
+        }
+
+        public void RestartLevel()
+        {
+            var session = FindObjectOfType<GameSession>();
+            Destroy(session);
+            
+            var scene = SceneManager.GetActiveScene();
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(scene.name);
         }
         
         public void OnStartGames()

@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace OneEyedJoe.Model.Definition
@@ -7,14 +6,8 @@ namespace OneEyedJoe.Model.Definition
     [CreateAssetMenu(menuName = "Defs/InventoryItems", fileName = "InventoryItems")]
     public class InventoryItemsDef : ScriptableObject
     {
-        [SerializeField] private int _sizeInventory = 6;
         [SerializeField] private ItemDef[] _items;
         
-        public int GetSizeInventory()
-        {
-            return _sizeInventory;
-        }
-
         public ItemDef GetId(string id)
         {
             foreach (var itemDef in _items)

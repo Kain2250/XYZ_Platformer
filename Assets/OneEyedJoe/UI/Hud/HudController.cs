@@ -1,5 +1,7 @@
+using System;
 using OneEyedJoe.Model;
 using OneEyedJoe.Model.Definition;
+using OneEyedJoe.UI.MainMenu;
 using OneEyedJoe.UI.Widgets;
 using UnityEngine;
 
@@ -13,10 +15,13 @@ namespace OneEyedJoe.UI.Hud
         [SerializeField] private PotionWidget _potionBar;
         
         private GameSession _session;
-
-        private void Start()
+        private void Awake()
         {
             _session = FindObjectOfType<GameSession>();
+        }
+        
+        private void Start()
+        {
             _session.Data.Hp.OnChanged += OnHealthChanged;
             _session.Data.Inventory.OnChanged += OnChangedInventory;
             
@@ -25,7 +30,7 @@ namespace OneEyedJoe.UI.Hud
             OnChangedInventory("Coin", _session.Data.Inventory.Count("Coin"));
             OnChangedInventory("Potion", _session.Data.Inventory.Count("Potion"));
         }
-
+        
         private void OnChangedInventory(string id, int value)
         {
             switch (id)
@@ -37,7 +42,8 @@ namespace OneEyedJoe.UI.Hud
                     _coinBar.SetCoinCount(value);
                     break;
                 case "Potion":
-                    _potionBar.SetPotionCount(value);
+                    var potionValue = _session.Data.Inventory.CountAll("Potion");
+                    _potionBar.SetPotionCount(potionValue);
                     break;
             }
         }

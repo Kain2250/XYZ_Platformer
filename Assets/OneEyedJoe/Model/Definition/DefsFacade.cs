@@ -8,7 +8,7 @@ namespace OneEyedJoe.Model.Definition
     {
         [SerializeField] private PlayerDef _player;
         [SerializeField] private InventoryItemsDef _items;
-        
+
         public PlayerDef Player => _player;
         public InventoryItemsDef Items => _items;
 

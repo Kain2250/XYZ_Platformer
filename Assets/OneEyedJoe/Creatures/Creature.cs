@@ -13,6 +13,7 @@ namespace OneEyedJoe.Creatures
     {
         [Header("Params")]
         [SerializeField] protected float _speed;
+        
         [SerializeField] protected float _jumpForce;
         [SerializeField] protected float _damageJumpForce;
         [SerializeField] private bool _invertScale;
@@ -35,6 +36,7 @@ namespace OneEyedJoe.Creatures
         protected bool IsGrounded;
         private bool _isJumping;
 
+        public float Speed => _speed;
 
         protected virtual void Awake()
         {
@@ -115,7 +117,8 @@ namespace OneEyedJoe.Creatures
         {
             _isJumping = false;
             Animator.SetTrigger(Hit);
-            Rigidbody.velocity = new Vector2(Rigidbody.velocity.x, _damageJumpForce);
+            Rigidbody.velocity = new Vector2(_damageJumpForce, _damageJumpForce);
+            
         }
 
         private void Attacking()
@@ -126,6 +129,11 @@ namespace OneEyedJoe.Creatures
         public virtual void Attack()
         {
             Animator.SetTrigger(IsAttack);
+        }
+
+        public void ChangeSpeed(float speed)
+        {
+            _speed = speed;
         }
         
     }

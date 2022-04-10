@@ -8,10 +8,10 @@ namespace OneEyedJoe.Creatures.Mobs
 {
     public class MobAi : MonoBehaviour
     {
-        [SerializeField] private LayerCheck _vision;
-        [SerializeField] private LayerCheck _checkAttack;
+        [SerializeField] protected LayerCheck _vision;
+        [SerializeField] protected LayerCheck _checkAttack;
 
-        [SerializeField] private float _attackCooldown = 1f;
+        [SerializeField] protected float _attackCooldown = 1f;
         [SerializeField] private float _alarmDelay = 0.5f;
         [SerializeField] private float _missDelay = 0.5f;
         
@@ -19,12 +19,12 @@ namespace OneEyedJoe.Creatures.Mobs
         private GameObject _target;
 
         private SpawnListComponent _particles;
-        private Creature _creature;
+        protected Creature _creature;
         private Animator _animator;
         private Patrol _patrol;
         
         private static readonly int IsDie = Animator.StringToHash("is-dead");
-        private bool _isDead;
+        protected bool _isDead;
         
         private void Awake()
         {
@@ -36,7 +36,8 @@ namespace OneEyedJoe.Creatures.Mobs
         
         private void Start()
         {
-            StartState(_patrol.DoPatrol());
+            if (_patrol)
+                StartState(_patrol.DoPatrol());
         }
 
         public void OnHeroInVision(GameObject go)
@@ -65,7 +66,7 @@ namespace OneEyedJoe.Creatures.Mobs
             _creature.UpdateSpriteDirection(direction);
         }
 
-        private IEnumerator GoToHero()
+        protected virtual IEnumerator GoToHero()
         {
             while (_vision.IsTouchingLayer)
             {
@@ -85,9 +86,11 @@ namespace OneEyedJoe.Creatures.Mobs
             _particles.Spawn("Miss");
             yield return new WaitForSeconds(_missDelay);
             
-            StartState(_patrol.DoPatrol());
+            if (_patrol)
+                StartState(_patrol.DoPatrol());
         }
-        private IEnumerator Attack()
+
+        protected IEnumerator Attack()
         {
             while (_checkAttack.IsTouchingLayer)
             {
@@ -103,7 +106,7 @@ namespace OneEyedJoe.Creatures.Mobs
             }
         }
 
-        private void SetDirectionToTarget()
+        protected void SetDirectionToTarget()
         {
             var direction = GetDirectionToTarget();
             _creature.SetDirection(direction.normalized);
@@ -128,8 +131,8 @@ namespace OneEyedJoe.Creatures.Mobs
                 StopCoroutine(_current);
             }
         }
-        
-        private void StartState(IEnumerator coroutine)
+
+        protected void StartState(IEnumerator coroutine)
         {
             _creature.SetDirection(Vector2.zero);
             

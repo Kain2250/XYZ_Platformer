@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +8,19 @@ namespace OneEyedJoe.Model
         [SerializeField] private PlayerData _data;
         public PlayerData Data => _data;
         
+        private bool _isPause;
         private PlayerData _save;
+        
+        public bool IsPause
+        {
+            get => _isPause;
+            set => _isPause = value;
+        }
 
         private void Awake()
         {
+            _isPause = false;
+            
             LoadHud();
 
             if (IsSessionExit())
@@ -50,6 +58,7 @@ namespace OneEyedJoe.Model
 
         public void LoadLastSave()
         {
+            _isPause = false;
             _data = _save.Clone();
         }
     }
