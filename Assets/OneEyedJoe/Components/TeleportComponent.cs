@@ -13,6 +13,7 @@ namespace OneEyedJoe.Components
         {
             StartCoroutine(AnimateTeleport(target));
         }
+        
         private IEnumerator AnimateTeleport(GameObject target)
         {
             var sprite = target.GetComponent<SpriteRenderer>();
@@ -60,5 +61,6 @@ namespace OneEyedJoe.Components
                 yield return null;
             }
         }
+        
     }
 }

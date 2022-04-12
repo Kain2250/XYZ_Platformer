@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using JetBrains.Annotations;
+using System.Linq;
 using OneEyedJoe.Model.Definition;
-using UnityEditorInternal.Profiling.Memory.Experimental;
+using OneEyedJoe.Utils.Disposables;
 using UnityEngine;
 
 namespace OneEyedJoe.Model.Data
@@ -14,6 +14,12 @@ namespace OneEyedJoe.Model.Data
         
         public delegate void OnInventoryChanged(string id, int countValue);
         public OnInventoryChanged OnChanged;
+        
+        public IDisposable Subscribe(OnInventoryChanged call)
+        {
+            OnChanged += call;
+            return new ActionDisposable(() => OnChanged -= call);
+        }
         
         public bool IsFull()
         {
@@ -34,19 +40,19 @@ namespace OneEyedJoe.Model.Data
         
         public bool IsStacked(string id)
         {
-            var itemDef = DefsFacade.I.Items.GetId(id);
+            var itemDef = DefsFacade.I.Items.Get(id);
 
-            return itemDef.IsStacked;
+            return itemDef.HasTag(ItemTag.Stackable);
         }
 
         public void Add(string id, int countValue)
         {
             if (countValue <= 0 ) return;
 
-            var itemDef = DefsFacade.I.Items.GetId(id);
+            var itemDef = DefsFacade.I.Items.Get(id);
             if (itemDef.IsVoid) return;
 
-            if (itemDef.IsStacked)
+            if (itemDef.HasTag(ItemTag.Stackable))
                 AddStackItem(id, countValue);
             else
                 AddNonStackItem(id, countValue);
@@ -81,10 +87,10 @@ namespace OneEyedJoe.Model.Data
         
         public void Remove(string id, int countValue)
         {
-            var itemDef = DefsFacade.I.Items.GetId(id);
+            var itemDef = DefsFacade.I.Items.Get(id);
             if (itemDef.IsVoid) return;
 
-            if (itemDef.IsStacked)
+            if (itemDef.HasTag(ItemTag.Stackable))
                 RemoveStackItem(id, countValue);
             else
                 RemoveNonStackItem(id, countValue);
@@ -116,7 +122,7 @@ namespace OneEyedJoe.Model.Data
 
         public int GetValue(string id)
         {
-            var itemDef = DefsFacade.I.Items.GetId(id);
+            var itemDef = DefsFacade.I.Items.Get(id);
             return itemDef.IsVoid ? 0 : itemDef.GetValue;
         }
 
@@ -129,6 +135,21 @@ namespace OneEyedJoe.Model.Data
             }
 
             return null;
+        }
+
+        public InventoryItemData[] GetAll(params ItemTag[] tags)
+        {
+            var retValue = new List<InventoryItemData>();
+            
+            foreach (var item in _inventory)
+            {
+                var itemDef = DefsFacade.I.Items.Get(item.Id);
+                var isAllRequirementsMet = tags.All(x => itemDef.HasTag(x));
+                if (isAllRequirementsMet)
+                    retValue.Add(item);
+            }
+            
+            return retValue.ToArray();
         }
         
         public int Count(string id)

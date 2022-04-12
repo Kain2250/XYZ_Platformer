@@ -1,10 +1,12 @@
 ﻿using System;
+using OneEyedJoe.Utils;
 using UnityEngine;
 
 namespace OneEyedJoe.Components.Audio
 {
     public class PlaySoundsComponent : MonoBehaviour
     {
+        
         [SerializeField] private AudioData[] _sounds;
         private AudioSource _source;
 
@@ -15,7 +17,7 @@ namespace OneEyedJoe.Components.Audio
                 if (audioData.Id != id) continue;
                 
                 if (_source == null)
-                    _source = GameObject.FindWithTag("SfxAudioSource").GetComponent<AudioSource>();
+                    _source = AudioUtils.FindSfxSource();
 
                 _source.PlayOneShot(audioData.Clip);
                 break;

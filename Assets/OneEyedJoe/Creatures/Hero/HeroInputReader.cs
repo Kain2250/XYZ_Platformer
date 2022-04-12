@@ -1,5 +1,6 @@
 ﻿using OneEyedJoe.Model;
 using OneEyedJoe.UI.MainMenu;
+using OneEyedJoe.Utils.Disposables;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -23,20 +24,32 @@ namespace OneEyedJoe.Creatures.Hero
 
             _inputActions.Hero.Attack.canceled += OnAttack;
             _inputActions.Hero.Interact.canceled += OnInteract;
-            _inputActions.Hero.Use.canceled += OnUse;
-            _inputActions.Hero.Throw.performed += OnThrow;
+            _inputActions.Hero.NextItem.canceled += OnNextItem;
+            _inputActions.Hero.Throw.started += OnThrow;
+            _inputActions.Hero.Throw.canceled += OnThrow;
             _inputActions.Hero.Pause.canceled += OnPause;
+            _inputActions.Hero.Dash.started += OnDash;
+            _inputActions.Hero.Dash.canceled += OnDash;
+            
         }
 
-        private void OnUse(InputAction.CallbackContext context)
+        public void OnNextItem(InputAction.CallbackContext context)
         {
             if (context.canceled)
             {
-                _hero.UseItemIsInventory();
+                _hero.NextItem();
             }
         }
+        
+        public void OnDash(InputAction.CallbackContext context)
+        {
+            if (context.started)
+                _hero.SetDash(true);
+            if (context.canceled)
+                _hero.SetDash(false);
+        }
 
-        private void OnPause(InputAction.CallbackContext context)
+        public void OnPause(InputAction.CallbackContext context)
         {
             if (context.canceled)
             {
@@ -55,7 +68,7 @@ namespace OneEyedJoe.Creatures.Hero
             _inputActions.Enable();
         }
 
-        private void OnAxisMovement(InputAction.CallbackContext context)
+        public void OnAxisMovement(InputAction.CallbackContext context)
         {
             var direction = context.ReadValue<Vector2>();
             _hero.SetDirection(direction);
@@ -75,13 +88,19 @@ namespace OneEyedJoe.Creatures.Hero
             {
                 _hero.Interact();
             }
+            
         }
 
         public void OnThrow(InputAction.CallbackContext context)
         {
-            if (context.performed)
+            if (context.started)
             {
-                _hero.Throw();
+                _hero.StartThrowing();
+            }
+
+            if (context.canceled)
+            {
+                _hero.PerformThrowing();
             }
         }
 
@@ -90,13 +109,14 @@ namespace OneEyedJoe.Creatures.Hero
             _inputActions.Hero.AxisMovement.performed -= OnAxisMovement;
             _inputActions.Hero.AxisMovement.canceled -= OnAxisMovement;
 
-            _inputActions.Hero.Use.canceled -= OnUse;
+            _inputActions.Hero.NextItem.canceled -= OnNextItem;
             _inputActions.Hero.Attack.canceled -= OnAttack;
             _inputActions.Hero.Interact.canceled -= OnInteract;
             _inputActions.Hero.Pause.canceled -= OnPause;
-            _inputActions.Hero.Throw.performed -= OnThrow;
-
-
+            _inputActions.Hero.Throw.started -= OnThrow;
+            _inputActions.Hero.Throw.canceled -= OnThrow;
+            _inputActions.Hero.Dash.started -= OnDash;
+            _inputActions.Hero.Dash.canceled -= OnDash;
         }
     }
 }

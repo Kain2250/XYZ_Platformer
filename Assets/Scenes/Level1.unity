@@ -23966,7 +23966,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _inventory:
-      _inventory: []
+      _inventory:
+      - Id: Coin
+        CountItem: 2
+      - Id: Key
+        CountItem: 1
+      - Id: PerlProjectile
+        CountItem: 50
     Hp:
       _value: 10
 --- !u!4 &2137768805
@@ -24958,6 +24964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950058736184523662, guid: 2a8ebd5c078a46647ab347753e958c1b,
+        type: 3}
+      propertyPath: _required.Array.data[0].CountItem
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a8ebd5c078a46647ab347753e958c1b, type: 3}

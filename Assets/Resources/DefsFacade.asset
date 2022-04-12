@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 11400000, guid: f04f6091a9ed86649940f09dd21c20b1, type: 2}
   _items: {fileID: 11400000, guid: f94f2d31d04459a4a8bbb5505012f79c, type: 2}
+  _throwableItems: {fileID: 11400000, guid: 6d4edb40f1f45ef44a9e6cea41e7e28a, type: 2}

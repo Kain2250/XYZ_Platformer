@@ -1,23 +1,16 @@
-using UnityEngine;
-
 namespace OneEyedJoe.Model.Data.Properties
 {
-    public abstract class PersistentProperty<TPropertyType>
+    public abstract class PersistentProperty<TPropertyType> : ObservableProperty<TPropertyType>
     {
-        [SerializeField] protected TPropertyType _value;
         protected TPropertyType _stored;
         private TPropertyType _defaultValue;
-
-        public delegate void OnPropertyChanged(TPropertyType newValue, TPropertyType oldValue);
-
+        
         public PersistentProperty(TPropertyType defaultValue)
         {
             _defaultValue = defaultValue;
         }
-
-        public event OnPropertyChanged OnChanged;
-
-        public TPropertyType Value
+        
+        public override TPropertyType Value
         {
             get => _stored;
             set
@@ -29,7 +22,7 @@ namespace OneEyedJoe.Model.Data.Properties
                 Write(value);
                 _stored = _value = value;
                 
-                OnChanged?.Invoke(value, oldValue);
+                InvokeChanged(_value, oldValue);
             }
         }
 

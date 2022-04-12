@@ -35,7 +35,7 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Use"",
+                    ""name"": ""NextItem"",
                     ""type"": ""Button"",
                     ""id"": ""c9545811-308f-4034-8e41-b57218fb3ebe"",
                     ""expectedControlType"": ""Button"",
@@ -62,6 +62,14 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                     ""name"": ""Throw"",
                     ""type"": ""Button"",
                     ""id"": ""0e4fd7c4-f539-4401-84c5-50881f932e89"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""18d26624-9c2e-4a79-918b-9518c283e4c3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -214,7 +222,7 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""86bb283e-313d-472e-9874-e1d65ce07037"",
-                    ""path"": ""<Keyboard>/leftShift"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -229,7 +237,18 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Use"",
+                    ""action"": ""NextItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0034ff41-bba4-4a9e-8889-8e5173ed89bc"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -242,10 +261,11 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
         m_Hero = asset.FindActionMap("Hero", throwIfNotFound: true);
         m_Hero_AxisMovement = m_Hero.FindAction("AxisMovement", throwIfNotFound: true);
         m_Hero_Interact = m_Hero.FindAction("Interact", throwIfNotFound: true);
-        m_Hero_Use = m_Hero.FindAction("Use", throwIfNotFound: true);
+        m_Hero_NextItem = m_Hero.FindAction("NextItem", throwIfNotFound: true);
         m_Hero_Attack = m_Hero.FindAction("Attack", throwIfNotFound: true);
         m_Hero_Pause = m_Hero.FindAction("Pause", throwIfNotFound: true);
         m_Hero_Throw = m_Hero.FindAction("Throw", throwIfNotFound: true);
+        m_Hero_Dash = m_Hero.FindAction("Dash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -297,20 +317,22 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
     private IHeroActions m_HeroActionsCallbackInterface;
     private readonly InputAction m_Hero_AxisMovement;
     private readonly InputAction m_Hero_Interact;
-    private readonly InputAction m_Hero_Use;
+    private readonly InputAction m_Hero_NextItem;
     private readonly InputAction m_Hero_Attack;
     private readonly InputAction m_Hero_Pause;
     private readonly InputAction m_Hero_Throw;
+    private readonly InputAction m_Hero_Dash;
     public struct HeroActions
     {
         private @HeroInputAction m_Wrapper;
         public HeroActions(@HeroInputAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @AxisMovement => m_Wrapper.m_Hero_AxisMovement;
         public InputAction @Interact => m_Wrapper.m_Hero_Interact;
-        public InputAction @Use => m_Wrapper.m_Hero_Use;
+        public InputAction @NextItem => m_Wrapper.m_Hero_NextItem;
         public InputAction @Attack => m_Wrapper.m_Hero_Attack;
         public InputAction @Pause => m_Wrapper.m_Hero_Pause;
         public InputAction @Throw => m_Wrapper.m_Hero_Throw;
+        public InputAction @Dash => m_Wrapper.m_Hero_Dash;
         public InputActionMap Get() { return m_Wrapper.m_Hero; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -326,9 +348,9 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                 @Interact.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnInteract;
-                @Use.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnUse;
-                @Use.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnUse;
-                @Use.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnUse;
+                @NextItem.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnNextItem;
+                @NextItem.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnNextItem;
+                @NextItem.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnNextItem;
                 @Attack.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnAttack;
@@ -338,6 +360,9 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                 @Throw.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnThrow;
                 @Throw.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnThrow;
                 @Throw.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnThrow;
+                @Dash.started -= m_Wrapper.m_HeroActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_HeroActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_HeroActionsCallbackInterface.OnDash;
             }
             m_Wrapper.m_HeroActionsCallbackInterface = instance;
             if (instance != null)
@@ -348,9 +373,9 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
-                @Use.started += instance.OnUse;
-                @Use.performed += instance.OnUse;
-                @Use.canceled += instance.OnUse;
+                @NextItem.started += instance.OnNextItem;
+                @NextItem.performed += instance.OnNextItem;
+                @NextItem.canceled += instance.OnNextItem;
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
@@ -360,6 +385,9 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
                 @Throw.started += instance.OnThrow;
                 @Throw.performed += instance.OnThrow;
                 @Throw.canceled += instance.OnThrow;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
             }
         }
     }
@@ -368,9 +396,10 @@ public class @HeroInputAction : IInputActionCollection, IDisposable
     {
         void OnAxisMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
-        void OnUse(InputAction.CallbackContext context);
+        void OnNextItem(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnThrow(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
 }

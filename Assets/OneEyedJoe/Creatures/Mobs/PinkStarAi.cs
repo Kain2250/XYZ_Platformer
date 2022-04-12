@@ -15,17 +15,18 @@ namespace OneEyedJoe.Creatures.Mobs
                 if (_checkAttack.IsTouchingLayer)
                 {
                     StartState(Attack());
-                    _creature.ChangeSpeed(oldSpeed);
+                    _creature.SetDash(false);
                 }
                 else
                 {
-                    _creature.ChangeSpeed(_speedRollAttack);
+                    _creature.SetDash(true);
                     SetDirectionToTarget();
                 }
 
                 yield return null;
 
             }
+            
         }
     }
 }

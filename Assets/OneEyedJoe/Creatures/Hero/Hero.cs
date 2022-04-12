@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using OneEyedJoe.Components.ColliderBased;
 using OneEyedJoe.Components.GoBased;
 using OneEyedJoe.Components.Health;
@@ -18,8 +19,13 @@ namespace OneEyedJoe.Creatures.Hero
         [SerializeField] private LayerCheck _wallCheck;
         [SerializeField] private SpawnDropComponent _spawnDrop;
 
+        [Space] [Header("Throw")]
         [SerializeField] private Cooldown _throwCooldown;
-
+        [SerializeField] private Cooldown _superThrowCooldown;
+        [SerializeField] private float _superThrowDelay;
+        [SerializeField] private int _countSuperThrowParticles;
+        [SerializeField] private SpawnComponent _throwSpawner;
+        
         [Space] [Header("Interactions")]
         [SerializeField] private CheckCircleOverlap _interactionCheck;
         
@@ -34,10 +40,27 @@ namespace OneEyedJoe.Creatures.Hero
         private GameSession _session;
         private bool _isOnWall;
         private bool _allowDoubleJump;
+        private bool _superThrow;
 
-        private int SwordCount => _session.Data.Inventory.Count("Sword");
+
+        private const string SwordId = "Sword";
+        private const string HealthPotionId = "Potion";
+        private int SwordCount => _session.Data.Inventory.Count(SwordId);
         private int CoinCount => _session.Data.Inventory.Count("Coin");
-        private int UseItemCount => _session.Data.Inventory.Count("Potion");
+        private int HealthPotionCount => _session.Data.Inventory.Count(HealthPotionId);
+        private string SelectedItemId => _session.QuickInventory.SelectedItem.Id;
+        
+        private bool CanThrow
+        {
+            get
+            {
+                if (SelectedItemId == SwordId)
+                    return SwordCount > 1;
+
+                var def = DefsFacade.I.Items.Get(SelectedItemId);
+                return def.HasTag(ItemTag.Throwable);
+            }
+        }
 
         protected override void Awake()
         {
@@ -57,13 +80,7 @@ namespace OneEyedJoe.Creatures.Hero
             health.SetHealth(_session.Data.Hp.Value);
             UpdateHeroWeapon();
         }
-
-        private void OnChangeInventory(string id, int value)
-        {
-            if (id == "Sword")
-                UpdateHeroWeapon();
-        }
-
+        
         protected override void Update()
         {
             base.Update();
@@ -83,6 +100,12 @@ namespace OneEyedJoe.Creatures.Hero
             Animator.SetBool(ClimbKey, _isOnWall);
         }
 
+        private void OnChangeInventory(string id, int value)
+        {
+            if (id == SwordId)
+                UpdateHeroWeapon();
+        }
+
         internal void Interact()
         {
             _interactionCheck.Check();
@@ -98,7 +121,7 @@ namespace OneEyedJoe.Creatures.Hero
                 _particles.Spawn("Landing");
             }
         }
-
+        
         protected override float CalculateYVelocity()
         {
             var isJumpPressing = Direction.y > 0;
@@ -175,45 +198,85 @@ namespace OneEyedJoe.Creatures.Hero
         {
             _session.Data.Hp.Value = currentHealth;
         }
+
         
-        public void Throw()
+        public void StartThrowing()
         {
-            if (_throwCooldown.IsReady && _armed && SwordCount > 1)
-            {
-                Animator.SetTrigger(ThrowKey);
-                _throwCooldown.Reset();
-            }
+            _superThrowCooldown.Reset();
         }
 
+        public void PerformThrowing()
+        {
+            if (!_throwCooldown.IsReady || !CanThrow) return;
+
+            if (_superThrowCooldown.IsReady) _superThrow = true;
+
+            Animator.SetTrigger(ThrowKey);
+            _throwCooldown.Reset();
+        }
+
+        
         public void OnDoThrow()
         {
-            if (SwordCount > 1)
+            if (_superThrow)
             {
-                _particles.Spawn("Throw");
-                _session.Data.Inventory.Remove("Sword", 1);
+                var throwableCount = _session.Data.Inventory.Count(SelectedItemId);
+                var possibleCount = SelectedItemId == SwordId ? throwableCount - 1 : throwableCount;
+                var numThrows = Mathf.Min(_countSuperThrowParticles, possibleCount);
+                StartCoroutine(DoSuperThrow(numThrows));
+            }
+            else
+            {
+                ThrowAndRemoveFromInventory();
+            }
+
+            _superThrow = false;
+        }
+
+        private IEnumerator DoSuperThrow(int numThrows)
+        {
+            for (int i = 0; i < numThrows; i++)
+            {
+                ThrowAndRemoveFromInventory();
+                yield return new WaitForSeconds(_superThrowDelay);
             }
         }
 
-        private void OnDestroy()
+        private void ThrowAndRemoveFromInventory()
         {
-            _session.Data.Inventory.OnChanged -= OnChangeInventory;
+            Sounds.Play("Range");
+            
+            var throwableDef = DefsFacade.I.Throwable.Get(SelectedItemId);
+            _throwSpawner.SetPrefab(throwableDef.Projectile);
+            _throwSpawner.Spawn();
+            
+            _session.Data.Inventory.Remove(SelectedItemId, 1);
         }
 
-        public void UseItemIsInventory()
+        private void UsePotion()
         {
-            var id = "Potion";
-
-            if (UseItemCount <= 0) return;
-            
-            if (id == "Potion")
+            if (HealthPotionCount > 0)
             {
-                var potionValue = _session.Data.Inventory.GetValue(id);
+                var potionValue = _session.Data.Inventory.GetValue(SelectedItemId);
                 var currentHeals = _session.Data.Hp.Value;
                 if (potionValue + currentHeals >= DefsFacade.I.Player.MaxHealth)
                     potionValue = DefsFacade.I.Player.MaxHealth - currentHeals;
                 
                 GetComponent<HealthComponent>().Apply(potionValue);
-                _session.Data.Inventory.Remove(id, 1);
+                _session.Data.Inventory.Remove(SelectedItemId, 1);
+            }
+        }
+
+        public void UseItemIsInventory()
+        {
+            switch (SelectedItemId)
+            {
+                case HealthPotionId:
+                    UsePotion();
+                    break;
+                default:
+                    Interact();
+                    break;
             }
         }
 
@@ -227,6 +290,17 @@ namespace OneEyedJoe.Creatures.Hero
             
             _spawnDrop.Spawn(go);
         }
+        
+        public void NextItem()
+        {
+            _session.QuickInventory.SetNextItem();
+        }
+        
+        private void OnDestroy()
+        {
+            _session.Data.Inventory.OnChanged -= OnChangeInventory;
+        }
+
     }
 
 }

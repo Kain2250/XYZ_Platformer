@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: -2407299761455315486}
   - component: {fileID: 4735717510759146270}
   - component: {fileID: 4735717510759146243}
-  - component: {fileID: 6322949635409839266}
   - component: {fileID: 9065826404996673676}
+  - component: {fileID: -1425183105844764677}
   m_Layer: 11
   m_Name: SilverCoinParticle
   m_TagString: Untagged
@@ -164,9 +164,9 @@ MonoBehaviour:
           m_StringArgument: destroy
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6322949635409839266}
+      - m_Target: {fileID: -1425183105844764677}
         m_MethodName: Play
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -246,21 +246,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &6322949635409839266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4735717510759146268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494595ed8ebc7434d8e391243642aa7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sounds:
-  - _id: coin
-    _clip: {fileID: 8300000, guid: a5362242c3e714ea7810e27eb85069e7, type: 3}
 --- !u!114 &9065826404996673676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,3 +260,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: Coin
   _count: 1
+--- !u!114 &-1425183105844764677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4735717510759146268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a2d54983fd496cb5456acaef7894ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 8300000, guid: a5362242c3e714ea7810e27eb85069e7, type: 3}

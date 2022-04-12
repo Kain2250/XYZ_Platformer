@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Use",
+                    "name": "NextItem",
                     "type": "Button",
                     "id": "c9545811-308f-4034-8e41-b57218fb3ebe",
                     "expectedControlType": "Button",
@@ -49,6 +49,14 @@
                     "name": "Throw",
                     "type": "Button",
                     "id": "0e4fd7c4-f539-4401-84c5-50881f932e89",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "18d26624-9c2e-4a79-918b-9518c283e4c3",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -201,7 +209,7 @@
                 {
                     "name": "",
                     "id": "86bb283e-313d-472e-9874-e1d65ce07037",
-                    "path": "<Keyboard>/leftShift",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -216,7 +224,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Use",
+                    "action": "NextItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0034ff41-bba4-4a9e-8889-8e5173ed89bc",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

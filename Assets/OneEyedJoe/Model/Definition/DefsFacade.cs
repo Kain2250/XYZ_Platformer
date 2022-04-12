@@ -8,9 +8,11 @@ namespace OneEyedJoe.Model.Definition
     {
         [SerializeField] private PlayerDef _player;
         [SerializeField] private InventoryItemsDef _items;
+        [SerializeField] private ThrowableItemsDef _throwableItems;
 
         public PlayerDef Player => _player;
         public InventoryItemsDef Items => _items;
+        public ThrowableItemsDef Throwable => _throwableItems;
 
         private static DefsFacade _instance;
         public static DefsFacade I => _instance == null ? LoadDefs() : _instance;

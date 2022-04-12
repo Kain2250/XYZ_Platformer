@@ -1,4 +1,5 @@
 ﻿using OneEyedJoe.Model;
+using OneEyedJoe.Utils;
 using UnityEngine;
 
 namespace OneEyedJoe.Components.GoBased
@@ -11,9 +12,15 @@ namespace OneEyedJoe.Components.GoBased
         [ContextMenu("Spawn")]
         public void Spawn()
         {
-            var instance = Instantiate(_prefab, _target.position, Quaternion.identity);
+            var instance = SpawnUtils.Spawn(_prefab, _target.position);
+            
             instance.transform.localScale = _target.lossyScale;
             instance.SetActive(true);
+        }
+
+        public void SetPrefab(GameObject prefab)
+        {
+            _prefab = prefab;
         }
     }
 }

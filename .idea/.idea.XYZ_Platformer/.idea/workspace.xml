@@ -4,176 +4,39 @@
     <list default="true" id="b56f142a-83c9-4c28-8dff-76e55f4a3ccd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XYZ_Platformer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Definitions/InventoryItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Definitions/InventoryItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Definitions/PlayerDef.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Definitions/PlayerDef.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/InventoryAddComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/InventoryAddComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Audio/PlaySoundsComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Audio/PlaySoundsComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/CollectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/Collectables/CollectorComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/RandomSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/RandomSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/GoBased/SpawnComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/TeleportComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Components/TeleportComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Creature.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/HeroInputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/HeroInputReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/MobAi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/MobAi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/PinkStarAi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/PinkStarAi.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/InventoryData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/InventoryData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/Properties/ObservableProperty.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/Properties/ObservableProperty.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/Properties/PersistentProperty.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Data/Properties/PersistentProperty.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/DefsFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/DefsFacade.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/PlayerDef.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/PlayerDef.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Model/GameSession.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Hud/HudController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Hud/HudController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/MainMenu/MainMenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/MainMenu/MainMenuWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/Utils/GameObjectExtentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/Utils/GameObjectExtentions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Climb.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Climb.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Dead.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Die.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Die.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Fall.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Fall.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Hit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Hit.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Jump.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/Run.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/_ArmedHero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Armed/_ArmedHero.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Widgets/AudioSettingsWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Widgets/AudioSettingsWidget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Widgets/ButtonSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/OneEyedJoe/UI/Widgets/ButtonSound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Unarmed/_UnarmedHero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Animations/Unarmed/_UnarmedHero.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Creatures/Hero/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DestroyedParticles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DestroyedParticles.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DestructableBarrel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Barel/DestructableBarel/DestructableBarrel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoinParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/GoldCoinParticle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinLevitate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinLevitate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Coins/SilverCoinParticle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Key.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Key.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Poutions/PotionsHealthLarge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Poutions/PotionsHealthLarge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Weapons/Sword.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Settings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Settings.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Poutions/PotionsHealthMana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Poutions/PotionsHealthMana.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Poutions/PotionsHealthSmall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Colectables/Poutions/PotionsHealthSmall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DefsFacade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DefsFacade.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Hud.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Hud.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Coins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Coins.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Door.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Door.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Helm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Helm.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Platforms (32x32).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Platforms (32x32).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Potions.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Potions.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Teleport.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Props/Teleport.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Destroyed/5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Hit.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Hit/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Hit/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Hit/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Hit/2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Hit/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Hit/3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Hit/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Hit/4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Idle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Idle/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/Merchant Ship/Sprites/Box/Idle/1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 04.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 05.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 06.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 07.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 08.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/04-Fall.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/04-Fall/Fall 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/04-Fall/Fall 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground/Ground 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground/Ground 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground/Ground 02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground/Ground 02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/06-Anticipation/Anticipation 03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 04.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/08-Hit/Hit 04.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/09-Dead Hit/Dead Hit 04.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/10-Dead Ground/Dead Ground 04.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/11-Attack Effect.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/11-Attack Effect/Attack Effect 01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/11-Attack Effect/Attack Effect 01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/11-Attack Effect/Attack Effect 02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/11-Attack Effect/Attack Effect 02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/11-Attack Effect/Attack Effect 03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/11-Attack Effect/Attack Effect 03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/11-Attack Effect/Attack Effect 04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/11-Attack Effect/Attack Effect 04.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UserInput/HeroInputAction.inputactions" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,8 +46,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/MobAi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/bf/345cb62d/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/Temp2_Lecture13-Resources.zip/Lecture13-Resources/Assets/Scripts/Components/ColliderBased/EnterTriggerComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/b5/1a9efeec/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -193,6 +65,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/59/afb260d2/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Model/Definition/InventoryItemsDef.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/8b/9ceb268b/NormalizationForm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/9d/89ba7dda/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/PointPatrol.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a1ac446df41c4a67becf2f8317dc1792116800/ef/178034cd/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Mobs/Patrolling/Patrol.cs" root0="FORCE_HIGHLIGHTING" />
@@ -234,10 +107,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3492">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12592">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="3492" />
+      <option name="pid" value="12592" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -275,7 +148,10 @@
       <workItem from="1649243137891" duration="31108000" />
       <workItem from="1649459044513" duration="7825000" />
       <workItem from="1649510032279" duration="8446000" />
-      <workItem from="1649603286758" duration="12972000" />
+      <workItem from="1649603286758" duration="14392000" />
+      <workItem from="1649671434429" duration="3740000" />
+      <workItem from="1649698856924" duration="19499000" />
+      <workItem from="1649784026065" duration="13933000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <created>1637860980398</created>
@@ -319,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649291864953</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ui + PauseMenu">
+      <created>1649626123392</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1649626123392</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +231,8 @@
     <MESSAGE value="Add inventory" />
     <MESSAGE value="Fix Inventory" />
     <MESSAGE value="Fix drop inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix drop inventory" />
+    <MESSAGE value="Ui + PauseMenu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ui + PauseMenu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -367,17 +251,17 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/OneEyedJoe/Components/Health/ModifyHealthComponent.cs</url>
-          <line>9</line>
-          <properties documentPath="D:\ProgramFiles\Projects\XYZ_Platformer\Assets\OneEyedJoe\Components\Health\ModifyHealthComponent.cs" initialLine="9" containingFunctionPresentation="method 'Apply'">
+          <url>file://$PROJECT_DIR$/Assets/OneEyedJoe/Creatures/Hero/Hero.cs</url>
+          <line>220</line>
+          <properties documentPath="D:\ProgramFiles\Projects\XYZ_Platformer\Assets\OneEyedJoe\Creatures\Hero\Hero.cs" initialLine="220" containingFunctionPresentation="method 'OnDoThrow'">
             <startOffsets>
-              <option value="241" />
+              <option value="6761" />
             </startOffsets>
             <endOffsets>
-              <option value="242" />
+              <option value="6777" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,5 +1,3 @@
-using System;
-using OneEyedJoe.Components;
 using OneEyedJoe.Components.Audio;
 using OneEyedJoe.Components.ColliderBased;
 using OneEyedJoe.Components.GoBased;
@@ -13,6 +11,7 @@ namespace OneEyedJoe.Creatures
     {
         [Header("Params")]
         [SerializeField] protected float _speed;
+        [SerializeField] protected float _dashModifier = 2;
         
         [SerializeField] protected float _jumpForce;
         [SerializeField] protected float _damageJumpForce;
@@ -34,7 +33,9 @@ namespace OneEyedJoe.Creatures
         protected Animator Animator;
         protected Vector2 Direction;
         protected bool IsGrounded;
+        private bool _isDash;
         private bool _isJumping;
+
 
         public float Speed => _speed;
 
@@ -52,7 +53,7 @@ namespace OneEyedJoe.Creatures
         
         public void FixedUpdate()
         {
-            var xVelocity = Direction.x * _speed;
+            var xVelocity = CalculateXVelocity();
             var yVelocity = CalculateYVelocity();
             Rigidbody.velocity = new Vector2(xVelocity, yVelocity);
 
@@ -61,6 +62,11 @@ namespace OneEyedJoe.Creatures
             Animator.SetBool(IsRunningKey, Direction.x != 0);
 
             UpdateSpriteDirection(Direction);
+        }
+
+        protected virtual float CalculateXVelocity()
+        {
+            return Direction.x * _speed * (_isDash ? _dashModifier : 1f);
         }
 
         protected virtual float CalculateYVelocity()
@@ -131,10 +137,9 @@ namespace OneEyedJoe.Creatures
             Animator.SetTrigger(IsAttack);
         }
 
-        public void ChangeSpeed(float speed)
+        public void SetDash(bool isDash)
         {
-            _speed = speed;
+            _isDash = isDash;
         }
-        
     }
 }

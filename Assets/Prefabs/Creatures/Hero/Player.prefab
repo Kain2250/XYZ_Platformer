@@ -5284,6 +5284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4.5
+  _dashModifier: 2
   _jumpForce: 12
   _damageJumpForce: 5
   _invertScale: 0
@@ -5297,6 +5298,11 @@ MonoBehaviour:
   _spawnDrop: {fileID: 6043696265671787504}
   _throwCooldown:
     _value: 1
+  _superThrowCooldown:
+    _value: 1
+  _superThrowDelay: 0.1
+  _countSuperThrowParticles: 3
+  _throwSpawner: {fileID: 7870118580431875676}
   _interactionCheck: {fileID: 8368408073054786168}
   _armed: {fileID: 9100000, guid: 8959dfce658407d4ab6c84d4e8ff22eb, type: 2}
   _unArmed: {fileID: 9100000, guid: d33a5e9e3c41fe34786d81789f11fcb0, type: 2}
@@ -5425,7 +5431,7 @@ GameObject:
   - component: {fileID: 6459630705971870010}
   - component: {fileID: 7870118580431875676}
   m_Layer: 0
-  m_Name: SwordThrowSpawnPosition
+  m_Name: ThrowSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

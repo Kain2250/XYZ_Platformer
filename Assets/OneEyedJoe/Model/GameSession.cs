@@ -1,3 +1,6 @@
+using System;
+using OneEyedJoe.Model.Data;
+using OneEyedJoe.Utils.Disposables;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +13,8 @@ namespace OneEyedJoe.Model
         
         private bool _isPause;
         private PlayerData _save;
+        private readonly CompositeDisposable _trash = new CompositeDisposable();
+        public QuickInventoryModel QuickInventory { get; private set; }
         
         public bool IsPause
         {
@@ -30,8 +35,15 @@ namespace OneEyedJoe.Model
             else
             {
                 Save();
+                InitModels();
                 DontDestroyOnLoad(this);
             }
+        }
+
+        private void InitModels()
+        {
+            QuickInventory = new QuickInventoryModel(Data);
+            _trash.Retain(QuickInventory);
         }
 
         private void LoadHud()
@@ -60,6 +72,11 @@ namespace OneEyedJoe.Model
         {
             _isPause = false;
             _data = _save.Clone();
+        }
+
+        private void OnDestroy()
+        {
+            _trash.Dispose();
         }
     }
 }

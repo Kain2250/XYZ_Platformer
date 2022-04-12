@@ -8,6 +8,7 @@ namespace OneEyedJoe.Components.Collectables
     public class CollectorComponent : MonoBehaviour, ICanAddInventory
     {
         [SerializeField] private List<InventoryItemData> _items = new List<InventoryItemData>();
+        
         public void AddInInventory(string id, int value)
         {
             _items.Add(new InventoryItemData(id){CountItem = value});
