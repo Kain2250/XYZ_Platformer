@@ -23,9 +23,10 @@ namespace OneEyedJoe.Components
             target.SetActive(false);
 
             yield return MoveAnimation(target);
-            
-            rb.simulated = true;
+
             target.SetActive(true);
+            rb.simulated = true;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             yield return AnimationAlpha(sprite, 1);
         }
 
